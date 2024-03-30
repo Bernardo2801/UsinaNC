@@ -13,6 +13,10 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <!-- Css do Projeto -->
+        <link rel="stylesheet" href="/css/styles.css">
+
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">

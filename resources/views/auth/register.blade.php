@@ -9,6 +9,20 @@
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
+        <!-- Cpf -->
+        <div class="mt-4" x-data>
+            <x-input-label for="cpf" :value="__('CPF')" />
+
+            <x-text-input id="cpf" class="block mt-1 w-full"
+                            type="text"
+                            name="cpf"
+                            required autocomplete="new-cpf"
+                            x-mask="999.999.999-99"
+                            />
+
+            <x-input-error :messages="$errors->get('cpf')" class="mt-2" />
+        </div>
+
         <!-- Email Address -->
         <div class="mt-4">
             <x-input-label for="email" :value="__('Email')" />
