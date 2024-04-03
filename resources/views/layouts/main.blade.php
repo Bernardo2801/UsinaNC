@@ -30,21 +30,21 @@
                 </div>
                 <div class="md:block">
                     <div class="ml-4 flex items-center space-x-4">
-                        <a href="/"
+                        <a href="/solicitantes"
                         class="text-white hover:bg-white hover:text-black rounded-lg p-2">
-                            Solicitante
+                            Solicitantes
                         </a>
-                        <a href="/"
+                        <a href="/materiais"
                         class="text-white hover:bg-white hover:text-black rounded-lg p-2">
                             Materiais
                         </a>
-                        <a href="/"
+                        <a href="/motorista"
                         class="text-white hover:bg-white hover:text-black rounded-lg p-2">
                             Motorista
                         </a>
-                        <a href="/"
+                        <a href="/veiculo"
                         class="text-white hover:bg-white hover:text-black rounded-lg p-2">
-                            Automóvel
+                            Veículo
                         </a>
                         @auth
                         <a href="/profile"
@@ -80,7 +80,7 @@
     @yield('content')
 
     <footer class="bg-blue-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-8 py-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-center h-12">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
@@ -92,5 +92,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Script Ion-Icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
