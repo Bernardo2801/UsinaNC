@@ -23,38 +23,38 @@
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <a href="/" class="text-white">
-                            <img src="img/logo-usina-text.png" alt="Logo" class="max-sm:hidden">
+                        <a href="/">
+                            <img src="img/logo-usina-text.png" alt="Logo">
                         </a>
                     </div>
                 </div>
                 <div class="md:block">
                     <div class="ml-4 flex items-center space-x-4">
                         <a href="/solicitantes"
-                        class="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                        class="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
                             Solicitantes
                         </a>
                         <a href="/materiais"
-                        class="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                        class="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
                             Materiais
                         </a>
                         <a href="/motorista"
-                        class="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                        class="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
                             Motorista
                         </a>
                         <a href="/veiculo"
-                        class="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                        class="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
                             Veículo
                         </a>
                         @auth
                         <a href="/profile"
-                        class="text-white hover:bg-white hover:text-black rounded-lg p-2">
+                        class="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 focus:bg-blue-700 active:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">
                             Meu perfil
                         </a>
                         <form action="/logout" method="POST">
                             @csrf
                             <a href="/logout"
-                                class="text-white hover:bg-white hover:text-black rounded-lg p-2"
+                                class="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-600 focus:bg-red-700 active:bg-red-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150"
                                 onclick="event.preventDefault();
                                 this.closest('form').submit();">
                                 Sair
