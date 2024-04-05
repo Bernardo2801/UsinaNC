@@ -8,8 +8,6 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware(['auth', 'verified'])->name('welcome');
 
-#PROVISÓRIAS, DEPOIS CRIAR UM CONTROLADOR PARA CADA ITEM E CRUD
-
 # Rota automóvel:
 Route::get('/veiculo', function () {
     return view('usina.veiculo');

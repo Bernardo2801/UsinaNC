@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="/css/styles.css">
 
     </head>
-    <body class="font-sans text-gray-900 antialiased flex flex-col items-center justify-center h-screen">
+    <body class="font-sans text-gray-900 antialiased flex flex-col items-center justify-center h-screen bg-gray-200 h-full">
 
         <div class="text-center mb-6">
             <a href="/">
