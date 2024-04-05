@@ -1,1 +1,1 @@
-<img src="/img/logo-usina-text.png" alt="Usina Novacap" width="200px" height="100px" class="p-4">
+<img src="/img/logo-usina-text-blue.png" alt="Usina Novacap" width="200px">
