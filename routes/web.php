@@ -18,10 +18,20 @@ Route::get('/motorista', function () {
     return view('usina.motorista');
 })->middleware(['auth', 'verified'])->name('motorista');
 
+# Rota adicionar motorista:
+Route::get('/adicionar-motorista', function (){
+    return view('usina.create-motorista');
+})->middleware(['auth', 'verified'])->name('addmotorista');
+
 # Rota materiais:
 Route::get('/materiais', function () {
     return view('usina.materiais');
 })->middleware(['auth', 'verified'])->name('materiais');
+
+# Rota adicionar material:
+Route::get('/adicionar-material', function (){
+    return view('usina.create-material');
+})->middleware(['auth', 'verified'])->name('addmaterial');
 
 # Rota solicitantes:
 Route::get('/solicitantes', function () {

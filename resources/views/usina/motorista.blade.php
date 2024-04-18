@@ -10,17 +10,19 @@
             <div class="bg-gray-800 border-b border-gray-200">
 
                 <div class="mb-4">
-                    <a href="#" class="inline-flex items-center px-4 py-2 bg-gray-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150">Adicionar Motorista</a>
+                    <a href="/adicionar-motorista" class="inline-flex items-center px-4 py-2 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150"><ion-icon name="add-outline" class="text-[26px] mr-2"></ion-icon>Adicionar Motorista</a>
                 </div>
+
+
 
                 <table class="table-auto w-full">
                     <thead>
                         <tr>
-                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center">Nome</th>
-                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center">Cargo</th>
-                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center">CNH</th>
-                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center">Cat.</th>
-                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center">Ver</th>
+                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Nome</th>
+                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Cargo</th>
+                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">CNH</th>
+                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Categoria</th>
+                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Ver</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,7 +31,7 @@
                             <td class="border px-4 py-2 text-white text-center">Erick Henry Diogo Ramos</td>
                             <td class="border px-4 py-2 text-white text-center">Motorista Usina</td>
                             <td class="border px-4 py-2 text-white text-center">569193274</td>
-                            <td class="border px-4 py-2 text-white text-center">C</td>
+                            <td class="border px-4 py-2 text-white text-center">ABC</td>
 
                             <td class="border px-4 py-2 text-center">
                                 <div class="flex justify-center">

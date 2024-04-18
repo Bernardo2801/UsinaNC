@@ -18,15 +18,15 @@
         <link rel="stylesheet" href="/css/styles.css">
 
     </head>
-    <body class="font-sans text-gray-900 antialiased flex flex-col items-center justify-center h-screen bg-gray-200 h-full">
+    <body class="font-sans text-gray-900 antialiased flex flex-col items-center justify-center h-screen h-full" style="background-color: #DBE4FE">
 
-        <div class="text-center mb-6">
+        <div class="text-center mt-6">
             <a href="/">
                 <x-application-logo class="sw-20 h-20 fill-current text-gray-500" />
             </a>
         </div>
 
-        <div class="w-full sm:max-w-md px-6 py-4 bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
+        <div class="w-full sm:max-w-md px-6 py-4 bg-gray-800 shadow-md sm:rounded-lg mb-2">
             {{ $slot }}
         </div>
 
