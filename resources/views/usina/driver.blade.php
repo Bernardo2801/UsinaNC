@@ -20,7 +20,7 @@
                         <tr>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Nome</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Cargo</th>
-                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">CNH</th>
+                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Matricula</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Categoria</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Ver</th>
                         </tr>
@@ -30,7 +30,7 @@
                         <tr>
                             <td class="border px-4 py-2 text-white text-center">Erick Henry Diogo Ramos</td>
                             <td class="border px-4 py-2 text-white text-center">Motorista Usina</td>
-                            <td class="border px-4 py-2 text-white text-center">569193274</td>
+                            <td class="border px-4 py-2 text-white text-center">P9L1X327</td>
                             <td class="border px-4 py-2 text-white text-center">ABC</td>
 
                             <td class="border px-4 py-2 text-center">
