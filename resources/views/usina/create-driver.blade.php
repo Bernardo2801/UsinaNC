@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Adicionar Motorista')
+@section('title', 'Usina (Adicionar motoristas)')
 
 @section('content')
 
