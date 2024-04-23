@@ -20,9 +20,9 @@
     </head>
     <body class="font-sans text-gray-900 antialiased flex flex-col items-center justify-center h-screen h-full bg-gray-200">
 
-        <div class="text-center mt-6">
+        <div class="text-center mt-6 -mb-16">
             <a href="/">
-                <x-application-logo class="sw-20 h-20 fill-current text-gray-500" />
+                <img src="/img/logo-usina-text-blue.png" alt="Logo Usina">
             </a>
         </div>
 
