@@ -5,15 +5,19 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsinaController;
 
 
-# Rota requests:
 Route::get('/', function () {
     return view('welcome');
 })->middleware(['auth', 'verified'])->name('welcome');
 
+# Rota requests:
+Route::get('/solicitacao', function () {
+    return view('usina.request');
+})->middleware(['auth', 'verified'])->name('usina.request');
+
 # Rota adicionar request:
 Route::get('/adicionar/solicitacao', function () {
     return view('usina.create-request');
-})->middleware(['auth', 'verified'])->name('create-request');
+})->middleware(['auth', 'verified'])->name('usina.create-request');
 
 # Rota veículo:
 Route::get('/veiculo', function () {

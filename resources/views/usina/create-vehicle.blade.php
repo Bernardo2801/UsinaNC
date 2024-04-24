@@ -15,19 +15,24 @@
                 @csrf
                     <div class="form-group mb-6">
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Modelo</label>
-                        <input type="text" class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600" placeholder="Digite aqui o modelo do veículo...">
+                        <input type="text" class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600" placeholder="Digite aqui o modelo do veículo..."
+                        required>
                     </div>
                     <div class="form-group mb-6">
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Tipo</label>
-                        <input type="text" class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600" placeholder="Informe o tipo deste veículo...">
+                        <input type="text" class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600" placeholder="Informe o tipo deste veículo..."
+                        required>
                     </div>
                     <div class="form-group mb-6">
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Placa</label>
-                        <input type="text" class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600" placeholder="Informe a placa...">
+                        <input type="text" id="placaInput" maxlength="7" class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600" placeholder="Informe a placa..."
+                        required>
+                        <small class="text-gray-400">Se a placa for antiga, não utilize o hífen (-).</small>
                     </div>
                     <div class="form-group mb-6">
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Chassi</label>
-                        <input type="text" class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600" placeholder="Informe o chassi...">
+                        <input type="text" maxlength="17" class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600" placeholder="Informe o chassi..."
+                        required>
                     </div>
                     <button type="submit"
                         class="inline-flex items-center px-4 py-2 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 mt-4" value="Adicionar novo motorista">
@@ -38,4 +43,14 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById("placaInput").addEventListener("keydown", function(event) {
+        // Verifica se o caractere pressionado é "-"
+        if (event.key === "-") {
+            // Se for, cancela o evento
+            event.preventDefault();
+        }
+    });
+</script>
 @endsection
