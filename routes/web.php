@@ -20,7 +20,7 @@ Route::get('/adicionar/solicitacao', function () {
 })->middleware(['auth', 'verified'])->name('usina.create-request');
 
 # Rota visualizar request:
-Route::get('/visualizar/solicitacao1', function() {
+Route::get('/visualizar/solicitacao', function() {
     return view('usina.view-request');
 })->middleware(['auth', 'verified'])->name('usina.view-request');
 

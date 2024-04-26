@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
-@section('title', 'Usina (Show pedidos)')
+@section('title', 'Usina (Show solicitantes)')
 
 @section('content')
 
-<h2>Show pedidos</h2>
+<h2>Show solicitantes</h2>
 
 @endsection

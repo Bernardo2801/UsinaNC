@@ -46,9 +46,15 @@
                             <td class="border px-4 py-2 text-center">
                                 <div class="flex justify-center">
 
-                                    <a href="/visualizar/motorista" class="text-white transition hover:text-blue-600 py-2 px-4">
-                                        <ion-icon name="eye" size="large"></ion-icon>
+                                    <a href="/visualizar/motorista" class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
+                                        <ion-icon name="eye" style="font-size: 28px;"></ion-icon>
                                     </a>
+                                    <a href="/editar/motorista" class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
+                                        <ion-icon name="create" style="font-size: 28px;"></ion-icon>
+                                    </a>
+                                    <button type="button" class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
+                                    py-1 px-2"><ion-icon name="trash" style="font-size: 28px;"></ion-icon>
+                                    </button>
 
                                 </div>
                             </td>
