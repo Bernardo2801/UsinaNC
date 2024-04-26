@@ -33,7 +33,7 @@
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Tipo</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Chassi</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Placa</th>
-                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Ver</th>
+                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,7 +48,13 @@
                                 <div class="flex justify-center">
 
                                     <a href="/visualizar/veiculo" class="text-white transition hover:text-blue-600 py-2 px-4">
-                                        <ion-icon name="eye" size="large"></ion-icon>
+                                        <ion-icon name="eye" style="font-size: 28px;"></ion-icon>
+                                    </a>
+                                    <a href="/editar/veiculo" class="text-white transition hover:text-blue-600 py-2 px-4">
+                                        <ion-icon name="create" style="font-size: 28px;"></ion-icon>
+                                    </a>
+                                    <a href="/editar/veiculo" class="text-white transition hover:text-blue-600 py-2 px-4">
+                                        <ion-icon name="trash" style="font-size: 28px;"></ion-icon>
                                     </a>
 
                                 </div>

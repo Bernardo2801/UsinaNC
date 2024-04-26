@@ -35,7 +35,7 @@
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase text-xs">Material solicitado</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase text-xs">Quantidade solicitada</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase text-xs">Status</th>
-                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase text-xs">Ver</th>
+                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase text-xs">Ações</th>
                         </tr>
                     </thead>
                     <tbody>

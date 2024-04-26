@@ -33,7 +33,7 @@
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Nome</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Matricula</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Categoria</th>
-                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Ver</th>
+                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
