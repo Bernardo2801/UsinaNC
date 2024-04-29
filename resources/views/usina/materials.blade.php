@@ -31,7 +31,7 @@
                         <tr>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Material</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Preço unitário</th>
-                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Quantidade Estoq.</th>
+                            <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Quantidade disponível</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Medida</th>
                             <th class="px-4 py-2 font-semibold text-white tracking-widest text-center uppercase">Ações</th>
                         </tr>
