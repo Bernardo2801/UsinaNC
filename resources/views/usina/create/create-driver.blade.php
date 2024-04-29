@@ -60,6 +60,10 @@
                         <input type="text" maxlength="11" class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600" placeholder="Digite o Nº Sei do motorista..."
                         required>
                     </div>
+
+                    <label for="message" class="block mb-2 text-sm font-medium text-gray-300 uppercase">Observação</label>
+                    <textarea id="message" rows="4" maxlength="320" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Caso exista alguma observação sobre este motorista, escreva aqui..."></textarea>
+
                     <button type="submit"
                         class="inline-flex items-center px-4 py-2 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 mt-4" value="Adicionar novo motorista">
                         <ion-icon name="add-outline" class="text-[26px] mr-2"></ion-icon>

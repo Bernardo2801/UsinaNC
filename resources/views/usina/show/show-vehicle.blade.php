@@ -12,7 +12,7 @@
                 <a href="/veiculo" class="inline-flex items-center px-3 py-1.5 font-semibold text-sm text-white uppercase tracking-widest"><ion-icon name="arrow-back" class="text-[26px] mr-2"></ion-icon>Voltar</a>
             </div>
 
-            <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 px-0 py-0  ">
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 px-3 py-1.5">
                 <div class="w-full h-max rounded-xl">
                     <dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
                         <div class="flex flex-col pb-3">
@@ -30,6 +30,10 @@
                         <div class="flex flex-col py-3">
                             <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Placa</dt>
                             <dd class="text-lg font-semibold">CAP0N22</dd>
+                        </div>
+                        <div class="flex flex-col py-3">
+                            <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Data de cadastro</dt>
+                            <dd class="text-lg font-semibold">29/04/2024</dd>
                         </div>
                         <div></div> <!-- Somente p adicionar divider abaixo da div placa -->
                     </dl>

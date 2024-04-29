@@ -16,13 +16,13 @@ Route::get('/solicitacao', function () {
 
 # Rota adicionar request:
 Route::get('/adicionar/solicitacao', function () {
-    return view('usina.create-request');
+    return view('usina.create.create-request');
 })->middleware(['auth', 'verified'])->name('usina.create-request');
 
 # Rota visualizar request:
 Route::get('/visualizar/solicitacao', function() {
-    return view('usina.view-request');
-})->middleware(['auth', 'verified'])->name('usina.view-request');
+    return view('usina.show.show-request');
+})->middleware(['auth', 'verified'])->name('usina.show-request');
 
 # Rota veículo:
 Route::get('/veiculo', function () {
@@ -31,13 +31,13 @@ Route::get('/veiculo', function () {
 
 # Rota adicionar veículo:
 Route::get('/adicionar/veiculo', function () {
-    return view('usina.create-vehicle');
+    return view('usina.create.create-vehicle');
 })->middleware(['auth', 'verified'])->name('usina.create-vehicle');
 
 # Rota visualizar veículo:
 Route::get('/visualizar/veiculo', function () {
-    return view('usina.view-vehicle');
-})->middleware(['auth', 'verified'])->name('usina.view-vehicle');
+    return view('usina.show.show-vehicle');
+})->middleware(['auth', 'verified'])->name('usina.show-vehicle');
 
 # Rota motorista:
 Route::get('/motorista', function () {
@@ -46,13 +46,13 @@ Route::get('/motorista', function () {
 
 # Rota adicionar motorista:
 Route::get('/adicionar/motorista', function (){
-    return view('usina.create-driver');
+    return view('usina.create.create-driver');
 })->middleware(['auth', 'verified'])->name('usina.create-driver');
 
 # Rota visualizar motorista:
 Route::get('/visualizar/motorista', function (){
-    return view('usina.view-driver');
-})->middleware(['auth', 'verified'])->name('usina.view-driver');
+    return view('usina.show.show-driver');
+})->middleware(['auth', 'verified'])->name('usina.show-driver');
 
 # Rota materiais:
 Route::get('/materiais', function () {
@@ -61,13 +61,13 @@ Route::get('/materiais', function () {
 
 # Rota adicionar material:
 Route::get('/adicionar/material', function (){
-    return view('usina.create-materials');
+    return view('usina.create.create-materials');
 })->middleware(['auth', 'verified'])->name('usina.create-materials');
 
 # Rota visualizar material:
 Route::get('/visualizar/material', function (){
-    return view('usina.view-materials');
-})->middleware(['auth', 'verified'])->name('usina.view-materials');
+    return view('usina.show.show-materials');
+})->middleware(['auth', 'verified'])->name('usina.show-materials');
 
 # Rota solicitantes:
 Route::get('/solicitantes', function () {
@@ -76,13 +76,13 @@ Route::get('/solicitantes', function () {
 
 # Rota adicionar solicitantes:
 Route::get('/adicionar/solicitantes', function () {
-    return view('usina.create-requesters');
+    return view('usina.create.create-requesters');
 })->middleware(['auth', 'verified'])->name('usina.create-requesters');
 
 # Rota visualizar solicitantes:
 Route::get('/visualizar/solicitantes', function () {
-    return view('usina.view-requesters');
-})->middleware(['auth', 'verified'])->name('usina.view-requesters');
+    return view('usina.show.show-requesters');
+})->middleware(['auth', 'verified'])->name('usina.show-requesters');
 
 Route::middleware('auth')->group(function () {
     Route::get('/meu-perfil', [ProfileController::class, 'edit'])->name('profile.edit');
