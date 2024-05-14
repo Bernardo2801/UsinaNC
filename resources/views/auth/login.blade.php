@@ -45,7 +45,7 @@
                     {{ __('Forgot your password?') }}
                 </a>
             @endif
-                <a class="underline text-xs text-gray-300 hover:text-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="/register">
+                <a class="underline text-xs text-gray-300 hover:text-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
                     {{('Ainda não tem uma conta?')}}
                 </a>
             <x-primary-button class="ms-3">

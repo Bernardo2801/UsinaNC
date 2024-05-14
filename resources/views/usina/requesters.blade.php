@@ -9,7 +9,7 @@
 
         <div class="flex items-center justify-between mb-4 tracking-widest mb-8">
             <div>
-                <a href="/adicionar/solicitantes" class="inline-flex items-center p-4 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 h-16"><ion-icon name="add-outline" class="text-[26px] mr-2"></ion-icon>Adicionar solicitante</a>
+                <a href="{{ route('usina.create-requesters') }}" class="inline-flex items-center p-4 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 h-16"><ion-icon name="add-outline" class="text-[26px] mr-2"></ion-icon>Adicionar solicitante</a>
             </div>
 
             <form class="max-w-md w-96">

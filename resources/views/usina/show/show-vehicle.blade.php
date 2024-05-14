@@ -9,7 +9,7 @@
         <div class="bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg p-6 lg:p-8">
 
             <div class="mb-6">
-                <a href="/veiculo" class="inline-flex items-center px-3 py-1.5 font-semibold text-sm text-white uppercase tracking-widest"><ion-icon name="arrow-back" class="text-[26px] mr-2"></ion-icon>Voltar</a>
+                <a href="{{ route('usina.vehicle') }}" class="inline-flex items-center px-3 py-1.5 font-semibold text-sm text-white uppercase tracking-widest"><ion-icon name="arrow-back" class="text-[26px] mr-2"></ion-icon>Voltar</a>
             </div>
 
             <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 px-3 py-1.5">
