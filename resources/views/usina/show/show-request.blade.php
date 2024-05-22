@@ -60,7 +60,7 @@
                         <div class="flex flex-col py-3">
                             <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Ações</dt>
                             <dd class="text-lg font-semibold">
-                            <a href="/editar/veiculo" class="text-gray-200 transition hover:text-blue-600 py-1 mr-2 active:text-blue-800">
+                            <a href="{{ route('usina.edit-request') }}" class="text-gray-200 transition hover:text-blue-600 py-1 mr-2 active:text-blue-800">
                             <ion-icon name="create" style="font-size: 28px;"></ion-icon>
                             </a>
                             <button type="button" class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150

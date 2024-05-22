@@ -1,9 +1,13 @@
 <?php
 
+use App\Http\Controllers\DriverController;
+use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NavController;
+use App\Http\Controllers\RequesterController;
+use App\Http\Controllers\SolicitationController;
 use App\Http\Controllers\UsinaController;
+use App\Http\Controllers\VehicleController;
 
 
 Route::middleware('auth')->group(function () {
@@ -12,52 +16,52 @@ Route::middleware('auth')->group(function () {
     Route::delete('/meu-perfil', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // rota welcome
-    Route::get('/', [NavController::class, 'welcome'])->name('welcome');
+    Route::get('/', [UsinaController::class, 'welcome'])->name('welcome');
 
     // rota requests
-            Route::get('/solicitacoes', [NavController::class, 'request'])->name('usina.request');
+            Route::get('/solicitacoes', [SolicitationController::class, 'index'])->name('usina.request');
             // rota add requests
-            Route::get('/adicionar/solicitacao', [NavController::class, 'createRequest'])->name('usina.create-request');
+            Route::get('/adicionar/solicitacao', [SolicitationController::class, 'create'])->name('usina.create-request');
             // rota view requests
-            Route::get('/visualizar/solicitacao', [NavController::class, 'showRequest'])->name('usina.show-request');
+            Route::get('/visualizar/solicitacao', [SolicitationController::class, 'show'])->name('usina.show-request');
             // rota edit requests
-            Route::get('/editar/solicitacao', [NavController::class, 'editRequest'])->name('usina.edit-request');
+            Route::get('/editar/solicitacao', [SolicitationController::class, 'edit'])->name('usina.edit-request');
 
     // rota requesters
-            Route::get('/solicitantes', [NavController::class, 'requesters'])->name('usina.requesters');
+            Route::get('/solicitantes', [RequesterController::class, 'index'])->name('usina.requesters');
             // rota add requesters
-            Route::get('/adicionar/solicitantes', [NavController::class, 'createRequesters'])->name('usina.create-requesters');
+            Route::get('/adicionar/solicitantes', [RequesterController::class, 'create'])->name('usina.create-requesters');
             // rota view requesters
-            Route::get('/visualizar/solicitantes', [NavController::class, 'showRequesters'])->name('usina.show-requesters');
+            Route::get('/visualizar/solicitantes', [RequesterController::class, 'show'])->name('usina.show-requesters');
             // rota edit requesters
-            Route::get('/editar/solicitantes', [NavController::class, 'editRequesters'])->name('usina.edit-requesters');
+            Route::get('/editar/solicitantes', [RequesterController::class, 'edit'])->name('usina.edit-requesters');
 
     // rota materials
-            Route::get('/materiais', [NavController::class, 'materials'])->name('usina.materials');
+            Route::get('/materiais', [MaterialController::class, 'index'])->name('usina.materials');
             // rota add requesters
-            Route::get('/adicionar/material', [NavController::class, 'createMaterials'])->name('usina.create-materials');
+            Route::get('/adicionar/material', [MaterialController::class, 'create'])->name('usina.create-materials');
             // rota view requesters
-            Route::get('/visualizar/material', [NavController::class, 'showMaterials'])->name('usina.show-materials');
+            Route::get('/visualizar/material', [MaterialController::class, 'show'])->name('usina.show-materials');
             // rota edit requesters
-            Route::get('/editar/material', [NavController::class, 'editMaterials'])->name('usina.edit-materials');
+            Route::get('/editar/material', [MaterialController::class, 'edit'])->name('usina.edit-materials');
 
     // rota driver
-            Route::get('/motoristas', [NavController::class, 'driver'])->name('usina.driver');
+            Route::get('/motoristas', [DriverController::class, 'index'])->name('usina.driver');
             // rota add requesters
-            Route::get('/adicionar/motorista', [NavController::class, 'createDriver'])->name('usina.create-driver');
+            Route::get('/adicionar/motorista', [DriverController::class, 'create'])->name('usina.create-driver');
             // rota view requesters
-            Route::get('/visualizar/motorista', [NavController::class, 'showDriver'])->name('usina.show-driver');
+            Route::get('/visualizar/motorista', [DriverController::class, 'show'])->name('usina.show-driver');
             // rota edit requesters
-            Route::get('/editar/motorista', [NavController::class, 'editDriver'])->name('usina.edit-driver');
+            Route::get('/editar/motorista', [DriverController::class, 'edit'])->name('usina.edit-driver');
 
     // rota vehicle
-            Route::get('/veiculos', [NavController::class, 'vehicle'])->name('usina.vehicle');
+            Route::get('/veiculos', [VehicleController::class, 'index'])->name('usina.vehicle');
             // rota add requesters
-            Route::get('/adicionar/veiculo', [NavController::class, 'createVehicle'])->name('usina.create-vehicle');
+            Route::get('/adicionar/veiculo', [VehicleController::class, 'create'])->name('usina.create-vehicle');
             // rota view requesters
-            Route::get('/visualizar/veiculo', [NavController::class, 'showVehicle'])->name('usina.show-vehicle');
+            Route::get('/visualizar/veiculo', [VehicleController::class, 'show'])->name('usina.show-vehicle');
             // rota edit requesters
-            Route::get('/editar/veiculo', [NavController::class, 'editVehicle'])->name('usina.edit-vehicle');
+            Route::get('/editar/veiculo', [VehicleController::class, 'edit'])->name('usina.edit-vehicle');
 
 });
 

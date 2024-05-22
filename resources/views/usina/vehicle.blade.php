@@ -9,7 +9,7 @@
 
         <div class="flex items-center justify-between mb-4 tracking-widest mb-8">
             <div>
-                <a href="/adicionar/veiculo" class="inline-flex items-center p-4 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 h-16"><ion-icon name="add-outline" class="text-[26px] mr-2"></ion-icon>Adicionar veículo</a>
+                <a href="{{ route('usina.create-vehicle') }}"  class="inline-flex items-center p-4 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 h-16"><ion-icon name="add-outline" class="text-[26px] mr-2"></ion-icon>Adicionar veículo</a>
             </div>
 
             <form class="max-w-md w-96">
@@ -60,10 +60,10 @@
                             CAP0N22
                         </td>
                         <td class="px-4 py-2 text-white text-right">
-                            <a href="/visualizar/veiculo" class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
+                            <a href="{{ route('usina.show-vehicle') }}"  class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
                                 <ion-icon name="eye" style="font-size: 28px;"></ion-icon>
                             </a>
-                            <a href="/editar/veiculo" class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
+                            <a href="{{ route('usina.edit-vehicle') }}"  class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
                                 <ion-icon name="create" style="font-size: 28px;"></ion-icon>
                             </a>
                             <button type="button" class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150

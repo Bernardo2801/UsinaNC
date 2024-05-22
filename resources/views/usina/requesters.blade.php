@@ -49,10 +49,10 @@
                             Adm. Samambaia
                         </td>
                         <td class="px-4 py-2 text-white text-right">
-                            <a href="/visualizar/solicitantes" class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
+                            <a href="{{ route('usina.show-requesters') }}" class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
                                 <ion-icon name="eye" style="font-size: 28px;"></ion-icon>
                             </a>
-                            <a href="/editar/solicitante" class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
+                            <a href="{{ route('usina.edit-requesters') }}" class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
                                 <ion-icon name="create" style="font-size: 28px;"></ion-icon>
                             </a>
                             <button type="button" class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
