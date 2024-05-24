@@ -9,6 +9,10 @@
     <!-- Tailwind -->
     @vite('resources/css/app.css')
 
+    <!-- Alertify -->
+    <link rel="stylesheet" href="{{asset('css/alertify.min.css')}}">
+    <script src="{{asset('js/alertify.min.js')}}"></script>
+
     <!-- Css do Projeto -->
     <link rel="stylesheet" href="/css/styles.css">
 

@@ -14,8 +14,11 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+        <script src="{{asset('js/alertify.min.js')}}"></script>
+
         <!-- Css do Projeto -->
         <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="{{asset('css/alertify.min.css')}}">
 
     </head>
     <body class="font-sans antialiased">

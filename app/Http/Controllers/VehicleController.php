@@ -9,36 +9,63 @@ class VehicleController extends Controller
 {
     public function index()
     {
-        return view('usina.vehicle');
+        $vehicles = Vehicle::all();
+        return view('vehicles.index', compact('vehicles'));
     }
 
     public function create()
     {
-        return view('usina.create.create-vehicle');
+        return view('vehicles.create');
     }
 
     public function store(Request $request)
     {
-        //
+        $request ->validate([
+            'vehicle_model' => 'required|string',
+            'vehicle_type' => 'required|string',
+            'chassi' => 'required|string|size:17',
+            'plate' => 'required|string|size:7',
+            'observation' => 'nullable|string',
+        ]);
+
+        Vehicle::create($request->all());
+
+        return redirect()->route('vehicles.index');
     }
 
-    public function show(vehicle $vehicle)
+    public function show(string $id)
     {
-        return view('usina.show.show-vehicle');
+        $vehicles = Vehicle::all();
+        return view('vehicles.show', compact('vehicles'));
     }
 
-    public function edit(vehicle $vehicle)
+    public function edit(string $id)
     {
-        return view('usina.edit.edit-vehicle');
+        $vehicle = Vehicle::findOrFail($id);
+        return view('vehicles.edit', compact('vehicle'));
     }
 
-    public function update(Request $request, vehicle $vehicle)
+    public function update(Request $request, string $id)
     {
-        //
+        $request ->validate([
+            'vehicle_model' => 'required|string',
+            'vehicle_type' => 'required|string',
+            'chassi' => 'required|string|size:17',
+            'plate' => 'required|string|size:7',
+            'observation' => 'nullable|string',
+        ]);
+
+        $vehicle = Vehicle::findOrFail($id);
+
+        $vehicle->update($request->all());
+
+        return redirect()->route('vehicles.index');
     }
 
-    public function destroy(vehicle $vehicle)
+    public function destroy(string $id)
     {
-        //
+        $vehicle = Vehicle::findOrFail($id);
+        $vehicle->delete();
+        return redirect()->route('vehicles.index');
     }
 }

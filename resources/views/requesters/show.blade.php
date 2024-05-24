@@ -9,7 +9,7 @@
         <div class="bg-gray-800 overflow-hidden shadow-xl sm:rounded-lg p-6 lg:p-8">
 
             <div class="mb-6">
-                <a href="{{ route('usina.requesters') }}" class="inline-flex items-center px-3 py-1.5 font-semibold text-sm text-white uppercase tracking-widest"><ion-icon name="arrow-back" class="text-[26px] mr-2"></ion-icon>Voltar</a>
+                <a href="{{ route('requesters.index') }}" class="inline-flex items-center px-3 py-1.5 font-semibold text-sm text-white uppercase tracking-widest"><ion-icon name="arrow-back" class="text-[26px] mr-2"></ion-icon>Voltar</a>
             </div>
 
             <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 px-3 py-1.5">
@@ -41,7 +41,7 @@
                             <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Ações</dt>
                             <dd class="text-lg font-semibold">
                                 <div>
-                                    <a href="{{ route('usina.edit-requesters') }}" class="text-gray-200 transition hover:text-blue-600 py-1 mr-2 active:text-blue-800">
+                                    <a href="{{ route('requesters.edit') }}" class="text-gray-200 transition hover:text-blue-600 py-1 mr-2 active:text-blue-800">
                                         <ion-icon name="create" style="font-size: 28px;"></ion-icon>
                                     </a>
                                     <button type="button" class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150

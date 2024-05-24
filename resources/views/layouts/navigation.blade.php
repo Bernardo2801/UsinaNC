@@ -12,19 +12,8 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('usina.request')" :active="request()->routeIs('usina.request')">
-                        {{ __('Solicitações') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('usina.requesters')" :active="request()->routeIs('usina.requesters')">
-                        {{ __('Solicitantes') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('usina.materials')" :active="request()->routeIs('usina.materials')">
-                        {{ __('Materiais') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('usina.driver')" :active="request()->routeIs('usina.driver')">
-                        {{ __('Motorista') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('usina.vehicle')" :active="request()->routeIs('usina.vehicle')">
+
+                    <x-nav-link :href="route('vehicles.index')" :active="request()->routeIs('vehicles.index')">
                         {{ __('Veículo') }}
                     </x-nav-link>
                 </div>
