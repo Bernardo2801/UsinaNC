@@ -28,7 +28,7 @@ Route::middleware('auth')->group(function () {
 
 
     // rota driver
-
+    Route::resource('drivers', DriverController::class);
 
     // rotas vehicle
     Route::resource('vehicles', VehicleController::class);

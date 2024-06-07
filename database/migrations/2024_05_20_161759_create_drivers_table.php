@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('cnh');
             $table->string('type_cnh');
             $table->string('registration');
+            $table->string('observation')->nullable();
             $table->timestamps();
         });
     }
