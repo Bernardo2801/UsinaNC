@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('cpf');
-            $table->string('cnh');
-            $table->string('type_cnh');
-            $table->string('registration');
+            $table->integer('cnh');
+            $table->array('type_cnh');
+            $table->integer('registration');
             $table->string('observation')->nullable();
             $table->timestamps();
         });

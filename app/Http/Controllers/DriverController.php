@@ -22,22 +22,26 @@ class DriverController extends Controller
     {
         $request ->validate([
             'name' => 'required|string',
-            'cpf' => 'required|string|size:11',
-            'cnh' => 'required|string|size:9',
-            'type_cnh' => 'required|string',
-            'registration' => 'required|string',
+            'cpf' => 'required|string|size:14',
+            'cnh' => 'required|integer',
+            'type_cnh' => 'required|array',
+            'registration' => 'required|integer',
             'observation' => 'nullable|string',
+        ], [
+            'type_cnh.required' => 'Por favor, preencha o TIPO da carteira do motorista.'
         ]);
+
+        $request->merge(['type_cnh' => implode(', ', $request->type_cnh)]);
 
         Driver::create($request->all());
 
         return redirect()->route('drivers.index');
     }
 
-    public function show(string $id)
+    public function show($id)
     {
-        $driver = Driver::all();
-        return view('drivers.show', compact('drivers'));
+        $driver = Driver::findOrFail($id);
+        return view('drivers.show', compact('driver'));
     }
 
     public function edit(string $id)
@@ -50,10 +54,13 @@ class DriverController extends Controller
     {
         $request ->validate([
             'name' => 'required|string',
-            'cpf' => 'required|string|size:11',
+            'cpf' => 'required|string|size:14',
             'cnh' => 'required|string|size:9',
             'type_cnh' => 'required|string',
             'registration' => 'required|string',
+            'observation' => 'nullable|string',
+        ], [
+            'type_cnh.required' => 'Por favor, preencha o TIPO da carteira do motorista.'
         ]);
 
         $driver = Driver::findOrFail($id);

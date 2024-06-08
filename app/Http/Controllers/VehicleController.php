@@ -33,10 +33,10 @@ class VehicleController extends Controller
         return redirect()->route('vehicles.index');
     }
 
-    public function show(string $id)
+    public function show($id)
     {
-        $vehicles = Vehicle::all();
-        return view('vehicles.show', compact('vehicles'));
+        $vehicle = Vehicle::findOrFail($id);
+        return view('vehicles.show', compact('vehicle'));
     }
 
     public function edit(string $id)

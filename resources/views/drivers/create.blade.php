@@ -24,53 +24,53 @@
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Digite aqui o nome do motorista..." required>
                     </div>
-                    <div class="form-group mb-6">
+                    <div class="form-group mb-6" x-data>
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Cnh</label>
                         <input type="text" name="cnh" id="cnh" maxlength="9"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
-                            placeholder="Informe qual o número da CNH..." required>
+                            placeholder="Informe qual o número da CNH..." required x-mask="999999999">
                     </div>
                     <div class="form-group mb-6" x-data>
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Cpf</label>
-                        <input type="text" name="cpf" id="cpf" maxlength="11"
+                        <input type="text" name="cpf" id="cpf" maxlength="14"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
-                            placeholder="Informe qual o CPF..." required>
+                            placeholder="Informe qual o CPF..." required x-mask="999.999.999-99">
                     </div>
                     <div class="form-group mb-6">
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase mb-2">Selecione a
                             categoria da carteira do motorista</label>
                         <div class="flex">
                             <div class="flex items-center me-4">
-                                <input checked id="inline-b-radio" type="radio" value="b" name="inline-radio-group"
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label for="inline-b-radio"
+                                <input type="checkbox" name="type_cnh[]" id="type_cnh" value="B"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="type_cnh"
                                     class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">B</label>
                             </div>
                             <div class="flex items-center me-4">
-                                <input id="inline-c-radio" type="radio" value="c" name="inline-radio-group"
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label for="inline-c-radio"
+                                <input type="checkbox" name="type_cnh[]" id="type_cnh" value="C"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="type_cnh"
                                     class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">C</label>
                             </div>
                             <div class="flex items-center me-4">
-                                <input id="inline-d-radio" type="radio" value="d" name="inline-radio-group"
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label for="inline-d-radio"
+                                <input type="checkbox" name="type_cnh[]" id="type_cnh" value="D"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="type_cnh"
                                     class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">D</label>
                             </div>
                             <div class="flex items-center">
-                                <input id="inline-e-radio" type="radio" value="e" name="inline-radio-group"
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label for="inline-e-radio"
+                                <input type="checkbox" name="type_cnh[]" id="type_cnh" value="E"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="type_cnh"
                                     class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">E</label>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group mb-6">
+                    <div class="form-group mb-6" x-data>
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase">N° Sei</label>
                         <input type="text" name="registration" id="registration" maxlength="11"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
-                            placeholder="Digite o Nº Sei do motorista..." required>
+                            placeholder="Digite o Nº Sei do motorista..." required x-mask="99999999999">
                     </div>
 
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-300 uppercase">Observação</label>
@@ -83,6 +83,14 @@
                         value="Adicionar novo motorista">
                         <ion-icon name="add-outline" class="text-[26px] mr-2"></ion-icon>
                         Adicionar</button>
+
+                        @if ($errors->any())
+                        <div class="mt-4">
+                            @foreach ($errors->all() as $error)
+                            <span class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{{ $error }}</span>
+                            @endforeach
+                        </div>
+                    @endif
                 </form>
             </div>
         </div>

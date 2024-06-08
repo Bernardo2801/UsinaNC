@@ -57,7 +57,7 @@
 
                     <button type="submit"
                         class="inline-flex items-center px-3 py-1.5 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 mt-4"
-                        value="Adicionar novo motorista">
+                        value="Adicionar novo veiculo...">
                         <ion-icon name="add-outline" class="text-[26px] mr-2"></ion-icon>
                         Adicionar</button>
                 </form>

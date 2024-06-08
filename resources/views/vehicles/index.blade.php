@@ -78,7 +78,7 @@
                                             class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
                                             <ion-icon name="create" style="font-size: 28px;"></ion-icon>
                                         </a>
-                                        <button type="button" onclick="confirmDelete({{ $vehicle->id }})"
+                                        <button type="button" onclick="confirmDelete({{ $vehicle->id }}, '{{ $vehicle->vehicle_model }}')"
                                             class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
                                             py-1 px-2"><ion-icon
                                                 name="trash" style="font-size: 28px;"></ion-icon>
@@ -94,8 +94,8 @@
     </div>
 
     <script>
-        function confirmDelete(id) {
-            alertify.confirm("This is a confirm dialog.", function (e) {
+        function confirmDelete(id, vehicle) {
+            alertify.confirm(`Tem certeza que deseja EXCLUIR ${vehicle}?`, function (e) {
                 if (e){
                     let form = document.createElement('form')
                     form.method = 'POST'
