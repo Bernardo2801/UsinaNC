@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('aux_type_measures', function (Blueprint $table) {
             $table->id();
-            $table->string('type_measures');
+            $table->string('measures_type');
             $table->timestamps();
         });
     }

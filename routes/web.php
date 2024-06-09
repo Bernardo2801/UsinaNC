@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
 
 
     // rota materials
-
+    Route::resource('materials', MaterialController::class);
 
     // rota driver
     Route::resource('drivers', DriverController::class);

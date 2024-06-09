@@ -17,14 +17,14 @@
                         para adiconar novo motorista.</h3>
                 </div>
 
-                <form method="POST" action="{{ route('drivers.update', $driver->id) }}" class="form-control w-full px-3 py-1.5">
+                <form method="POST" action="{{ route('drivers.update', $driver->id) }}"
+                    class="form-control w-full px-3 py-1.5">
                     @csrf
                     @method('PUT')
 
                     <div class="form-group mb-6">
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Nome</label>
-                        <input type="text" name="name" id="name"
-                            value="{{ old('name', $driver->name) }}"
+                        <input type="text" name="name" id="name" value="{{ old('name', $driver->name) }}"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Digite aqui o nome do motorista..." required>
                     </div>
@@ -46,6 +46,7 @@
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase mb-2">Selecione a
                             categoria da carteira do motorista</label>
                         <div class="flex">
+
                             <div class="flex items-center me-4">
                                 <input type="checkbox" name="type_cnh[]" id="type_cnh" value="B"
                                     class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -70,6 +71,7 @@
                                 <label for="type_cnh"
                                     class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">E</label>
                             </div>
+
                         </div>
                     </div>
                     <div class="form-group mb-6" x-data>
@@ -89,12 +91,13 @@
                         class="inline-flex items-center px-4 py-2 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 mt-4"
                         value="Adicionar novo motorista">
                         <ion-icon name="checkbox-outline" class="text-[26px] mr-2"></ion-icon>
-                        Adicionar</button>
+                        Editar</button>
 
                     @if ($errors->any())
                         <div class="mt-4">
                             @foreach ($errors->all() as $error)
-                            <span class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{{ $error }}</span>
+                                <span
+                                    class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300">{{ $error }}</span><br>
                             @endforeach
                         </div>
                     @endif

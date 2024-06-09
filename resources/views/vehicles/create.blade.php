@@ -60,6 +60,15 @@
                         value="Adicionar novo veiculo...">
                         <ion-icon name="add-outline" class="text-[26px] mr-2"></ion-icon>
                         Adicionar</button>
+
+                    @if ($errors->any())
+                        <div class="mt-4">
+                            @foreach ($errors->all() as $error)
+                                <span
+                                    class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300 uppercase">{{ $error }}</span><br>
+                            @endforeach
+                        </div>
+                    @endif
                 </form>
             </div>
         </div>

@@ -14,14 +14,15 @@ return new class extends Migration
         Schema::create('materials', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->decimal('unit_price');
+            $table->decimal('stock_quantity');
+            $table->string('observation')->nullable();
+            $table->timestamps();
+
 
             //relacionamento aux_type_measures com material
-            $table->unsignedBigInteger('id_aux_type_measures');
-            $table->foreign('id_aux_type_measures')->references('id')->on('aux_type_measures')->onDelete('cascade')->onUpdate('cascade');
-
-            $table->string('unit_price');
-            $table->string('stock_quantity');
-            $table->timestamps();
+            $table->unsignedBigInteger('measures_type');
+            $table->foreign('measures_type')->references('id')->on('aux_type_measures')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

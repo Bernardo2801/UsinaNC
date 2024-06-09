@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('cpf');
             $table->integer('cnh');
-            $table->array('type_cnh');
-            $table->integer('registration');
+            $table->json('type_cnh');
+            $table->bigInteger('registration');
             $table->string('observation')->nullable();
             $table->timestamps();
         });
