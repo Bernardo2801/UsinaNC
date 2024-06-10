@@ -63,18 +63,18 @@
                     <div class="form-group mb-6">
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Preço por
                             medida</label>
-                        <input type="number" step="0.01" min="0.01"
+                        <input type="number" name="unit_price" id="unit_price" step="0.01" min="0.01"
                             class="block w-full p-2.5 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Informe o preço de tal medida..." required>
                     </div>
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Quantidade</label>
-                        <input type="number" step="0.01"
+                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Quantidade disponível</label>
+                        <input type="number" name="stock_quantity" id="stock_quantity" step="0.01" min="0.01"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Informe a quantidade disponível em estoque..." required>
                     </div>
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-300 uppercase">Observação</label>
-                    <textarea id="message" rows="4" maxlength="320"
+                    <textarea id="observation" name="observation" rows="4"
                         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Caso exista alguma observação sobre este material, escreva aqui..."></textarea>
                     <button type="submit"

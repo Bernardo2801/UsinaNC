@@ -23,14 +23,15 @@ class MaterialController extends Controller
     {
         $request ->validate([
             'name' => 'required|string',
-            'unit_price' => 'required|float',
-            'stock_quantity' => 'required|float',
+            'unit_price' => 'required',
+            'stock_quantity' => 'required',
+            'measures_type' => 'required|string',
             'observation' => 'nullable|string',
         ]);
 
         Material::create($request->all());
 
-        return redirect()->route('drivers.index');
+        return redirect()->route('materials.index');
     }
 
     public function show(string $id)
@@ -59,6 +60,6 @@ class MaterialController extends Controller
     {
         $material = Material::findOrFail($id);
         $material->delete();
-        return redirect()->route('drivers.index');
+        return redirect()->route('materials.index');
     }
 }

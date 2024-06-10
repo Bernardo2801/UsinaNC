@@ -59,16 +59,16 @@
                                 <tr
                                     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                     <th scope="row" class="px-4 py-2 text-white">
-                                        {{ $material->material }}
+                                        {{ $material->name }}
                                     </th>
                                     <td class="px-4 py-2 text-white ">
-                                        {{ $material->unit_price }}
+                                        R${{ number_format($material->unit_price, 2, ',', '.') }}
                                     </td>
                                     <td class="px-4 py-2 text-white ">
                                         {{ $material->stock_quantity }}
                                     </td>
                                     <td class="px-4 py-2 text-white ">
-                                        {{ $material->measures }}
+                                        {{ $material->measures_type }}
                                     </td>
                                     <td class="px-4 py-2 text-white text-right">
                                         <a href="{{ route('materials.show', $material->id) }}"
@@ -79,9 +79,9 @@
                                             class="text-gray-200 transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
                                             <ion-icon name="create" style="font-size: 28px;"></ion-icon>
                                         </a>
-                                        <button type="button"
+                                        <button type="button" onclick="confirmDelete({{ $material->id }}, '{{ $material->name }}')"
                                             class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
-                                py-1 px-2"><ion-icon
+                                            py-1 px-2"><ion-icon
                                                 name="trash" style="font-size: 28px;"></ion-icon>
                                         </button>
                                     </td>
@@ -93,4 +93,22 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function confirmDelete(id, name) {
+            alertify.confirm(`Tem certeza que deseja EXCLUIR ${name}?`, function (e) {
+                if (e){
+                    let form = document.createElement('form')
+                    form.method = 'POST'
+                    form.action = `/materials/${id}`
+                    form.innerHTML = '@csrf @method("DELETE")'
+                    document.body.appendChild(form)
+                    form.submit()
+                } else {
+                    return false
+                }
+            })
+        }
+    </script>
+
 @endsection
