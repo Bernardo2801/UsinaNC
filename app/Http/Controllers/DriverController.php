@@ -9,8 +9,14 @@ class DriverController extends Controller
 {
     public function index()
     {
-        $drivers = Driver::all();
-        return view('drivers.index', compact('drivers'));
+        $search = request('search');
+        if($search) {
+            $drivers = Driver::whereRaw('LOWER(name) LIKE ?', ['%' . strtolower($search) . '%'])->get();
+        } else {
+            $drivers = Driver::orderBy('name', 'asc')->get();
+        }
+
+        return view('drivers.index', compact('drivers'), ['drivers' => $drivers, 'search' => $search]);
     }
 
     public function create()

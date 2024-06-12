@@ -9,8 +9,14 @@ class VehicleController extends Controller
 {
     public function index()
     {
-        $vehicles = Vehicle::all();
-        return view('vehicles.index', compact('vehicles'));
+        $search = request('search');
+        if($search) {
+            $vehicles = Vehicle::whereRaw('LOWER(vehicle_model) LIKE ?', ['%' . strtolower($search) . '%'])->get();
+        } else {
+            $vehicles = Vehicle::orderBy('vehicle_model', 'asc')->get();
+        }
+
+        return view('vehicles.index', compact('vehicles'), ['vehicles' => $vehicles, 'search' => $search]);
     }
 
     public function create()

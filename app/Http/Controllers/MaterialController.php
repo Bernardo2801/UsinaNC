@@ -7,11 +7,16 @@ use Illuminate\Http\Request;
 
 class MaterialController extends Controller
 {
-
     public function index()
     {
-        $materials = Material::all();
-        return view('materials.index', compact('materials'));
+        $search = request('search');
+        if($search) {
+            $materials = Material::whereRaw('LOWER(name) LIKE ?', ['%' . strtolower($search) . '%'])->get();
+        } else {
+            $materials = Material::orderBy('name', 'asc')->get();
+        }
+
+        return view('materials.index', compact('materials'), ['materials' => $materials, 'search' => $search]);
     }
 
     public function create()
@@ -50,10 +55,17 @@ class MaterialController extends Controller
     {
         $request ->validate([
             'name' => 'required|string',
-            'unit_price' => 'required|float',
-            'stock_quantity' => 'required|float',
+            'unit_price' => 'required',
+            'stock_quantity' => 'required',
+            'measures_type' => 'required|string',
             'observation' => 'nullable|string',
         ]);
+
+        $material = Material::findOrFail($id);
+
+        $material->update($request->all());
+
+        return redirect()->route('materials.index');
     }
 
     public function destroy(string $id)
