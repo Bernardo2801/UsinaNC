@@ -22,7 +22,7 @@ Route::middleware('auth')->group(function () {
 
 
     // rota requesters
-
+    Route::resource('requesters', RequesterController::class);
 
     // rota materials
     Route::resource('materials', MaterialController::class);

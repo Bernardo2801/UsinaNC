@@ -17,11 +17,11 @@
                     <dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
                         <div class="flex flex-col pb-3">
                             <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Tipo orgão</dt>
-                            <dd class="text-lg font-semibold">Órgão público</dd>
+                            <dd class="text-lg font-semibold">{{ $requester->name_requester }}</dd>
                         </div>
                         <div class="flex flex-col py-3">
                             <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Nome orgão</dt>
-                            <dd class="text-lg font-semibold">Adm. Samambaia</dd>
+                            <dd class="text-lg font-semibold">{{ $requester->type_requester }}</dd>
                         </div>
                         <div class="flex flex-col py-3">
                             <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Chefia</dt>

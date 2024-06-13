@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('type_requester');
             $table->string('name_requester');
+            $table->string('departament_boss');
+            $table->string('observation')->nullable();
             $table->timestamps();
         });
     }

@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Material extends Model
+class Requester extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
-    protected $fillable = ['name', 'unit_price', 'stock_quantity', 'observation', 'measures_type'];
+    protected $fillable = ['type_requester', 'name_requester', 'departament_boss', 'observation'];
 }
