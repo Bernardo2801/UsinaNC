@@ -35,6 +35,11 @@
                     </form>
                 </div>
                 @if (count($requesters) > 0)
+                    @if ($search)
+                        <h2 class="px-4 py-2 font-semibold text-white tracking-widest uppercase">Buscando por: {{ $search }}</h2>
+                    @else
+
+                    @endif
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                             <thead class="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -44,6 +49,9 @@
                                     </th>
                                     <th scope="col" class="px-4 py-2 font-semibold text-white tracking-widest uppercase">
                                         Nome órgão
+                                    </th>
+                                    <th scope="col" class="px-4 py-2 font-semibold text-white tracking-widest uppercase">
+                                        Chefe
                                     </th>
                                     <th scope="col" class="px-4 py-2 font-semibold text-white tracking-widest uppercase">
                                         <span class="sr-only">Edit</span>
@@ -59,6 +67,9 @@
                                         </th>
                                         <td class="px-4 py-2 text-white ">
                                             {{ $requester->name_requester }}
+                                        </td>
+                                        <td class="px-4 py-2 text-white ">
+                                            {{ $requester->departament_boss }}
                                         </td>
                                         <td class="px-4 py-2 text-white text-right">
                                             <a href="{{ route('requesters.show', $requester->id) }}"
@@ -84,7 +95,7 @@
                 @else
                     <p
                         class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-159 py-1 px-2">
-                        Até o momento, nenhum veículo foi cadastrado.</p>
+                        Infelizmente, não encontramos nada na nossa base.</p>
                 @endif
             </div>
         </div>

@@ -14,7 +14,7 @@
                 </div>
                 <div class="mb-2">
                     <h3 class="px-3 py-1.5 font-semibold text-sm text-white uppercase tracking-widest">Preencha os campos
-                        para adiconar novo veículo.</h3>
+                        para editar novo veículo.</h3>
                 </div>
 
                 <form method="POST" action="{{ route('vehicles.update', $vehicle->id) }}"

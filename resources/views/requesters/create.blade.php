@@ -53,10 +53,16 @@
                     </div>
 
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Nome</label>
+                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Nome do Orgão</label>
                         <input type="text" name="name_requester" id="name_requester"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Nome do orgão ou departamento interno. Ex: DEINF ou Adm. Samambaia..." required>
+                    </div>
+                    <div class="form-group mb-6">
+                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Chefe de departamento</label>
+                        <input type="text" name="departament_boss" id="departament_boss"
+                            class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
+                            placeholder="Nome do chefe de orgão ou do departamento" required>
                     </div>
 
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-300 uppercase">Observação</label>

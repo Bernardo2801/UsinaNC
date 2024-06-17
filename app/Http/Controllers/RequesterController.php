@@ -30,7 +30,7 @@ class RequesterController extends Controller
             'type_requester' => 'required|string',
             'name_requester' => 'required|string',
             'departament_boss' => 'required|string',
-            'observation' => 'nullable|string',
+            'observation' => 'nullable|string'
         ]);
 
         Requester::create($request->all());
@@ -56,7 +56,7 @@ class RequesterController extends Controller
             'type_requester' => 'required|string',
             'name_requester' => 'required|string',
             'departament_boss' => 'required|string',
-            'observation' => 'nullable|string',
+            'observation' => 'nullable|string'
         ]);
 
         $requester = Requester::findOrFail($id);

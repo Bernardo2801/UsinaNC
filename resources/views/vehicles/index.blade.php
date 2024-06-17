@@ -34,6 +34,11 @@
                     </form>
                 </div>
                 @if (count($vehicles) > 0)
+                    @if ($search)
+                        <h2 class="px-4 py-2 font-semibold text-white tracking-widest uppercase">Buscando por: {{ $search }}</h2>
+                    @else
+
+                    @endif
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                             <thead class="text-sm text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -93,7 +98,7 @@
                         </table>
                     </div>
                 @else
-                    <p class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-159 py-1 px-2"> Até o momento, nenhum material foi cadastrado.</p>
+                    <p class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-159 py-1 px-2">Infelizmente, não encontramos nada na nossa base.</p>
                 @endif
             </div>
         </div>
