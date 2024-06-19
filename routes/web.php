@@ -8,7 +8,7 @@ use App\Http\Controllers\RequesterController;
 use App\Http\Controllers\SolicitationController;
 use App\Http\Controllers\UsinaController;
 use App\Http\Controllers\VehicleController;
-
+use GuzzleHttp\Psr7\Request;
 
 Route::middleware('auth')->group(function () {
     Route::get('/meu-perfil', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -19,7 +19,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/', [UsinaController::class, 'welcome'])->name('welcome');
 
     // rota requests
-
+    Route::resource('solicitations', SolicitationController::class);
 
     // rota requesters
     Route::resource('requesters', RequesterController::class);
