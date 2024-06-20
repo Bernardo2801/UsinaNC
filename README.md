@@ -30,7 +30,6 @@
 - PHP (versão especificada no arquivo composer.json)
 - Composer
 - Node.js
-- npm
 </p>
 
 <h4>
