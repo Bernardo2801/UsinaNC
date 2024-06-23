@@ -45,5 +45,5 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 `tests/` - Contém os testes automatizados.<br>
 
 # Dúvidas?
-Qualquer dúvida ou sugestão entre em contato comigo! Obrigado pela atenção. :)
+Qualquer dúvida ou sugestão entre em contato comigo! Obrigado pela atenção. :) <br>
 Projeto em andamento.
