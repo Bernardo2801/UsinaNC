@@ -12,53 +12,38 @@
 
 <hr>
 
-<h3>
-    Instruções para Execução
-</h3>
+# Configuração do Projeto
+Siga os passos abaixo para configurar e executar o projeto em seu ambiente local.
 
-<p>
-    Siga estas etapas para configurar e executar o projeto localmente:
-</p>
+<h1>Requisitos do Projeto</h1>
+    <ul>
+        <li>PHP &gt;= 7.3</li>
+        <li>Composer</li>
+        <li>Node.js &gt;= 12.x</li>
+        <li>MySQL ou outro banco de dados compatível</li>
+    </ul>
 
-<h4>
-    Pré-requisitos
-</h4>
+# Instalação
 
-<p>
-    Certifique-se de ter instalado em sua máquina:
+1. Clone o repositório: `https://github.com/Bernardo2801/controle-de-estoque.git`;
+2. Instale as dependências PHP: `composer install`;
+3. Configure o arquivo .env com suas configurações de banco de dados. Para gerar o arquivo .env, execute: `copy .env.example .env`;
+4. Execute as migrações: `php artisan migrate`;
+5. Instale as dependências do projeto listadas no arquivo package.json utilizando o gerenciador de pacotes npm: `npm install`;
+6. Após a instalação, inicie o processo de desenvolvimento: `npm run dev`;
+7. Gere a chave necessária para a execução do sistema: `php artisan key:generate`;
+8. Inicie o servidor de desenvolvimento do Laravel: `php artisan serve`;
 
-- PHP (versão especificada no arquivo composer.json)
-- Composer
-- Node.js
-</p>
+# Estrutura do Projeto
 
-<h4>
-    Instalação
-</h4>
+`app/` - Contém os arquivos principais da aplicação. <br>
+`config/` - Contém os arquivos de configuração. <br>
+`database/` - Contém migrações, seeders e factories. <br>
+`public/` - Contém os arquivos públicos, como o index.php e assets. <br>
+`resources/` - Contém as views, arquivos de tradução, etc. <br>
+`routes/` - Contém os arquivos de rotas da aplicação. <br>
+`tests/` - Contém os testes automatizados.<br>
 
-<p>
-    1. Clone o repositório.
-    2. Navegue até o diretório do projeto.
-    3. Instale as dependências do Composer.
-    4. Instale as dependências do npm.
-</p>
-
-<h4>
-    Configuração
-</h4>
-
-<p>
-    1. Copie o arquivo .env.example para .env:
-    <code>cp .env.example .env</code>. <br>
-    2. Gere uma chave de aplicativo:
-    <code>php artisan key:generate</code>. <br>
-</p>
-
-<h4>
-    Execução
-</h4>
-
-<p>
-    1. Para rodar o servidor localmente:
-    <code>php artisan serve</code>. <br> Isso iniciará o servidor de desenvolvimento em http://localhost:8000.
-</p>
+# Dúvidas?
+Qualquer dúvida ou sugestão entre em contato comigo! Obrigado pela atenção. :)
+Projeto em andamento.
