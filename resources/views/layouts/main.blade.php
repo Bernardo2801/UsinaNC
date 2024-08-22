@@ -20,12 +20,12 @@
     <script src="/js/scripts.js"></script>
 </head>
 
-<body class="bg-gray-200">
+<body class="bg-gray-100 dark:bg-slate-900">
 <x-app-layout>
 
     @yield('content')
 
-    <footer class="bg-blue-950">
+    <footer class="bg-blue-950 border-t border-gray-600">
         <div class="max-w-7xl mx-auto px-8 py-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-center h-12">
                 <div class="flex items-center">
