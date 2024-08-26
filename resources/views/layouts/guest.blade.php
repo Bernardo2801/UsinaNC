@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="/css/styles.css">
 
     </head>
-    <body class="font-sans text-gray-900 antialiased flex flex-col items-center justify-center h-screen h-full bg-gray-200">
+    <body class="font-sans text-gray-900 antialiased flex flex-col items-center justify-center h-screen h-full bg-gray-100 dark:bg-slate-900">
 
         <div class="text-center mt-6 -mb-16">
             <a href="/">
@@ -26,7 +26,7 @@
             </a>
         </div>
 
-        <div class="w-full sm:max-w-md px-6 py-4 bg-gray-800 shadow-md sm:rounded-lg mb-2">
+        <div class="w-full sm:max-w-md px-6 py-4 bg-slate-50 dark:bg-slate-800 shadow-md sm:rounded-lg mb-2">
             {{ $slot }}
         </div>
 

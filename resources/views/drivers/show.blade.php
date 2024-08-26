@@ -22,11 +22,19 @@
                                     <dd class="text-lg font-semibold">{{ $driver->name }}</dd>
                                 </div>
                                 <div class="flex flex-col py-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">CNH</dt>
+                                    <dd class="text-lg font-semibold">{{ $driver->cnh }}</dd>
+                                </div>
+                                <div class="flex flex-col py-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">CPF</dt>
+                                    <dd class="text-lg font-semibold">{{ $driver->cpf }}</dd>
+                                </div>
+                                <div class="flex flex-col py-3">
                                     <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Matricula</dt>
                                     <dd class="text-lg font-semibold">{{ $driver->registration }}</dd>
                                 </div>
                                 <div class="flex flex-col py-3">
-                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Categoria</dt>
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Categoria da CNH</dt>
                                     <dd class="text-lg font-semibold">{{ $driver->type_cnh }}</dd>
                                 </div>
                                 <div class="flex flex-col py-3">
