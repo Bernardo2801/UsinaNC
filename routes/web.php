@@ -64,4 +64,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/vehicles/{id}', [VehicleController::class, 'destroy'])->name('vehicles.destroy')->middleware('can:access');
 });
 
+
+// rotas que possuem o can:access é o que determina os níveis de usuário.
+
 require __DIR__ . '/auth.php';
