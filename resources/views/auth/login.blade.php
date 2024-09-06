@@ -16,6 +16,7 @@
             required autocomplete="new-cpf"
             x-mask="999.999.999-99"
             :value="old('cpf')" required autofocus autocomplete="cpf" />
+
             <x-input-error :messages="$errors->get('cpf')" class="mt-2" />
         </div>
 

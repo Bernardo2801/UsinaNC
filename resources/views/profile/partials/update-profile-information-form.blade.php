@@ -25,7 +25,15 @@
 
         <div>
             <x-input-label for="cpf" :value="__('CPF')" />
-            <x-text-input id="cpf" name="cpf" type="text" class="mt-1 block w-full" :value="old('cpf', $user->cpf)" required autofocus autocomplete="cpf" />
+            <x-text-input id="cpf"
+                class="block mt-1 w-full"
+                type="text"
+                name="cpf"
+                required autocomplete="new-cpf"
+                x-mask="999.999.999-99"
+                :value="old('cpf', $user->cpf)" required autofocus autocomplete="cpf"
+                x-init="$el.dispatchEvent(new Event('input'))" />
+
             <x-input-error class="mt-2" :messages="$errors->get('cpf')" />
         </div>
 

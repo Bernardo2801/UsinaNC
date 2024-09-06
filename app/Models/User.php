@@ -21,6 +21,7 @@ class User extends Authenticatable //implements MustVerifyEmail
         'cpf',
         'email',
         'password',
+        'access_level',
     ];
 
     /**
