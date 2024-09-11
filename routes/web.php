@@ -15,6 +15,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/meu-perfil', [ProfileController::class, 'update'])->name('profile.update')->middleware('can:access');
     Route::delete('/meu-perfil', [ProfileController::class, 'destroy'])->name('profile.destroy')->middleware('can:access');
 
+    Route::get('/admin/edit-access-level', [ProfileController::class, 'editAccessLevel'])->name('admin.edit-access-level')->middleware('can:access');
+    Route::patch('/admin/update-access-level', [ProfileController::class, 'updateAccessLevel'])->name('users.update-access-level')->middleware('can:access');
+    Route::get('/admin/users', [ProfileController::class, 'index'])->name('admin.user-list')->middleware('can:access');
+
     // rota welcome
     Route::get('/', [UsinaController::class, 'welcome'])->name('welcome');
 

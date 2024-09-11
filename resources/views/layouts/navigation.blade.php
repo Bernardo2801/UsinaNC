@@ -53,6 +53,12 @@
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
+                        @can('access')
+                            <x-dropdown-link :href="route('admin.edit-access-level')">
+                                {{ __('Gerenciador') }}
+                            </x-dropdown-link>
+                        @endcan
+
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
