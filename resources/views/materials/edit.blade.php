@@ -80,7 +80,7 @@
                         placeholder="Caso exista alguma observação sobre este material, escreva aqui...">{{ old('observation', $material->observation) }}</textarea>
                     <button type="submit"
                         class="inline-flex items-center px-4 py-2 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 mt-4"
-                        value="Adicionar novo motorista">
+                        value="Editar material">
                         <ion-icon name="add-outline" class="text-[26px] mr-2"></ion-icon>
                         Adicionar</button>
                     @if ($errors->any())

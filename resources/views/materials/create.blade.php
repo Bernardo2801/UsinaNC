@@ -32,7 +32,6 @@
                             <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                                 <div class="flex items-center ps-3">
                                     <input type="radio" name="measures_type" id="measures_type" value="T"
-
                                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                                     <label for="horizontal-list-radio-tonelada"
                                         class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Tonelada
@@ -42,7 +41,6 @@
                             <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r dark:border-gray-600">
                                 <div class="flex items-center ps-3">
                                     <input type="radio" name="measures_type" id="measures_type" value="KG"
-
                                         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
                                     <label for="horizontal-list-radio-quilograma"
                                         class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Quilograma
@@ -68,7 +66,8 @@
                             placeholder="Informe o preço de tal medida..." required>
                     </div>
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Quantidade disponível</label>
+                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Quantidade
+                            disponível</label>
                         <input type="number" name="stock_quantity" id="stock_quantity" step="0.01" min="0.01"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Informe a quantidade disponível em estoque..." required>
@@ -79,7 +78,7 @@
                         placeholder="Caso exista alguma observação sobre este material, escreva aqui..."></textarea>
                     <button type="submit"
                         class="inline-flex items-center px-4 py-2 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 mt-4"
-                        value="Adicionar novo motorista">
+                        value="Adicionar novo material">
                         <ion-icon name="add-outline" class="text-[26px] mr-2"></ion-icon>
                         Adicionar</button>
                     @if ($errors->any())
