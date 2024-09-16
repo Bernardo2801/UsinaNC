@@ -40,13 +40,13 @@ class Solicitation extends Model
     }
 
     // Relacionamento com Motorista
-    public function drivers()
+    public function driver()
     {
         return $this->belongsTo(Driver::class);
     }
 
     // Relacionamento com Veiculo
-    public function vehicle_id()
+    public function vehicle()
     {
         return $this->belongsTo(Vehicle::class);
     }

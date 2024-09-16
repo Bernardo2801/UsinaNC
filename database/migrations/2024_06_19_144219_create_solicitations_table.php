@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('material_id')->references('id')->on('materials');
             $table->decimal('unit_price');
             $table->string('sei_number');
-            $table->decimal('requesWted_quantity');
+            $table->decimal('requested_quantity');
             $table->date('date_solicitation');
             $table->string('status');
             $table->foreignId('driver_id')->references('id')->on('drivers');

@@ -31,7 +31,8 @@
                             </div>
                             <div class="flex flex-col py-3">
                                 <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Data de cadastro</dt>
-                                <dd class="text-lg font-semibold">{{ date('d/m/Y - H:i:s', strtotime($requester->created_at)) }}</dd>
+                                <dd class="text-lg font-semibold">
+                                    {{ date('d/m/Y - H:i:s', strtotime($requester->created_at)) }}</dd>
                             </div>
                             <div class="flex flex-col py-3">
                                 <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Ultima edição:
@@ -53,7 +54,8 @@
                                             class="text-gray-200 transition hover:text-blue-600 py-1 mr-2 active:text-blue-800">
                                             <ion-icon name="create" style="font-size: 28px;"></ion-icon>
                                         </a>
-                                        <button type="button" onclick="confirmDelete({{ $requester->id }}, '{{ $requester->name_requester }}')"
+                                        <button type="button"
+                                            onclick="confirmDelete({{ $requester->id }}, '{{ $requester->name_requester }}')"
                                             class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
                                             py-1 px-2"><ion-icon
                                                 name="trash" style="font-size: 28px;"></ion-icon>
@@ -72,12 +74,12 @@
 
     <script>
         function confirmDelete(id, requester) {
-            alertify.confirm(`Tem certeza que deseja EXCLUIR ${requester}?`, function (e) {
-                if (e){
+            alertify.confirm(`Tem certeza que deseja EXCLUIR ${requester}?`, function(e) {
+                if (e) {
                     let form = document.createElement('form')
                     form.method = 'POST'
                     form.action = `/requesters/${id}`
-                    form.innerHTML = '@csrf @method("DELETE")'
+                    form.innerHTML = '@csrf @method('DELETE')'
                     document.body.appendChild(form)
                     form.submit()
                 } else {

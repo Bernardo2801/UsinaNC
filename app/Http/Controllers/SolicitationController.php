@@ -38,15 +38,15 @@ class SolicitationController extends Controller
     {
         // Validação dos dados recebidos do formulário
         $request->validate([
-            'requesters_id' => 'required|exists:requesters,id',
-            'materials_id' => 'required|exists:materials,id',
+            'requester_id' => 'required|exists:requesters,id',
+            'material_id' => 'required|exists:materials,id',
             'unit_price' => 'required',
             'sei_number' => 'required',
             'requested_quantity' => 'required',
             'date_solicitation' => 'required|date',
             'status' => 'required|string',
-            'drivers_id' => 'required|exists:drivers,id',
-            'vehicles_id' => 'required|exists:vehicles,id',
+            'driver_id' => 'required|exists:drivers,id',
+            'vehicle_id' => 'required|exists:vehicles,id',
         ]);
 
         // Criação da nova solicitação
@@ -65,7 +65,13 @@ class SolicitationController extends Controller
     public function edit(string $id)
     {
         $solicitation = Solicitation::findOrFail($id);
-        return view('solicitations.edit', compact('solicitation'));
+        $requesters = Requester::all();
+        $materials = Material::all();
+        $drivers = Driver::all();
+        $vehicles = Vehicle::all();
+
+        $solicitation = Solicitation::findOrFail($id);
+        return view('solicitations.edit', compact('solicitation', 'requesters', 'materials', 'drivers', 'vehicles'));
     }
 
     public function update(Request $request, string $id)
