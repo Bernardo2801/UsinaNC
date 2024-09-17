@@ -94,12 +94,6 @@
                                     class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Iniciado</label>
                             </div>
                             <div class="flex items-center me-4">
-                                <input id="orange-radio" type="radio" value="Em processo" name="status"
-                                    class="w-4 h-4 text-orange-500 bg-gray-100 border-gray-300 focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                <label for="orange-radio"
-                                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Em processo</label>
-                            </div>
-                            <div class="flex items-center me-4">
                                 <input id="green-radio" type="radio" value="Finalizado" name="status"
                                     class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                                 <label for="green-radio"

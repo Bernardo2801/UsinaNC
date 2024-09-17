@@ -10,9 +10,11 @@
 
                 <div class="flex items-center justify-between mb-4 tracking-widest mb-8">
                     <div>
-                        <a href="{{ route('materials.create') }}"
-                            class="inline-flex items-center p-4 bg-slate-50 dark:bg-slate-600 shadow-xl border border-transparent rounded-md font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest hover:bg-gray-200 dark:hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 h-16"><ion-icon
-                                name="add-outline" class="text-[26px] mr-2"></ion-icon>Adicionar material</a>
+                        @can('access')
+                            <a href="{{ route('materials.create') }}"
+                                class="inline-flex items-center p-4 bg-slate-50 dark:bg-slate-600 shadow-xl border border-transparent rounded-md font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest hover:bg-gray-200 dark:hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 h-16"><ion-icon
+                                    name="add-outline" class="text-[26px] mr-2"></ion-icon>Adicionar material</a>
+                        @endcan
                     </div>
 
                     <form class="max-w-md w-96">
@@ -87,16 +89,18 @@
                                                 class="text-slate-800 dark:text-white transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
                                                 <ion-icon name="eye" style="font-size: 28px;"></ion-icon>
                                             </a>
-                                            <a href="{{ route('materials.edit', $material->id) }}"
-                                                class="text-slate-800 dark:text-white transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
-                                                <ion-icon name="create" style="font-size: 28px;"></ion-icon>
-                                            </a>
-                                            <button type="button"
-                                                onclick="confirmDelete({{ $material->id }}, '{{ $material->name }}')"
-                                                class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
+                                            @can('access')
+                                                <a href="{{ route('materials.edit', $material->id) }}"
+                                                    class="text-slate-800 dark:text-white transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
+                                                    <ion-icon name="create" style="font-size: 28px;"></ion-icon>
+                                                </a>
+                                                <button type="button"
+                                                    onclick="confirmDelete({{ $material->id }}, '{{ $material->name }}')"
+                                                    class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
                                             py-1 px-2"><ion-icon
-                                                    name="trash" style="font-size: 28px;"></ion-icon>
-                                            </button>
+                                                        name="trash" style="font-size: 28px;"></ion-icon>
+                                                </button>
+                                            @endcan
                                         </td>
                                     </tr>
                             @endforeach

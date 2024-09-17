@@ -13,49 +13,49 @@
                         class="inline-flex items-center px-3 py-1.5 font-semibold text-sm text-white uppercase tracking-widest"><ion-icon
                             name="arrow-back" class="text-[26px] mr-2"></ion-icon>Voltar</a>
                 </div>
-                    <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 px-3 py-1.5">
-                        <div class="w-full h-max rounded-xl">
-                            <dl
-                                class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
-                                <div class="flex flex-col pb-3">
-                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Nome</dt>
-                                    <dd class="text-lg font-semibold">{{ $driver->name }}</dd>
-                                </div>
-                                <div class="flex flex-col py-3">
-                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">CNH</dt>
-                                    <dd class="text-lg font-semibold">{{ $driver->cnh }}</dd>
-                                </div>
-                                <div class="flex flex-col py-3">
-                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">CPF</dt>
-                                    <dd class="text-lg font-semibold">{{ $driver->cpf }}</dd>
-                                </div>
-                                <div class="flex flex-col py-3">
-                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Matricula</dt>
-                                    <dd class="text-lg font-semibold">{{ $driver->registration }}</dd>
-                                </div>
-                                <div class="flex flex-col py-3">
-                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Categoria da CNH</dt>
-                                    <dd class="text-lg font-semibold">{{ $driver->type_cnh }}</dd>
-                                </div>
-                                <div class="flex flex-col py-3">
-                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Data de cadastro
-                                    </dt>
-                                    <dd class="text-lg font-semibold">{{ date('d/m/Y - H:i:s', strtotime($driver->created_at)) }}</dd>
-                                </div>
-                                <div class="flex flex-col py-3">
-                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Ultima edição:
-                                    </dt>
-                                    <dd class="text-lg font-semibold">
-                                        {{ date('d/m/Y - H:i:s', strtotime($driver->updated_at)) }}</dd>
-                                </div>
-                                <div></div> <!-- Somente p adicionar divider abaixo da div placa -->
-                            </dl>
-                        </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 px-3 py-1.5">
+                    <div class="w-full h-max rounded-xl">
+                        <dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+                            <div class="flex flex-col pb-3">
+                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Nome</dt>
+                                <dd class="text-lg font-semibold">{{ $driver->name }}</dd>
+                            </div>
+                            <div class="flex flex-col py-3">
+                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">CNH</dt>
+                                <dd class="text-lg font-semibold">{{ $driver->cnh }}</dd>
+                            </div>
+                            <div class="flex flex-col py-3">
+                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">CPF</dt>
+                                <dd class="text-lg font-semibold">{{ $driver->cpf }}</dd>
+                            </div>
+                            <div class="flex flex-col py-3">
+                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Matricula</dt>
+                                <dd class="text-lg font-semibold">{{ $driver->registration }}</dd>
+                            </div>
+                            <div class="flex flex-col py-3">
+                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Categoria da CNH</dt>
+                                <dd class="text-lg font-semibold">{{ $driver->type_cnh }}</dd>
+                            </div>
+                            <div class="flex flex-col py-3">
+                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Data de cadastro
+                                </dt>
+                                <dd class="text-lg font-semibold">
+                                    {{ date('d/m/Y - H:i:s', strtotime($driver->created_at)) }}</dd>
+                            </div>
+                            <div class="flex flex-col py-3">
+                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Ultima edição:
+                                </dt>
+                                <dd class="text-lg font-semibold">
+                                    {{ date('d/m/Y - H:i:s', strtotime($driver->updated_at)) }}</dd>
+                            </div>
+                            <div></div> <!-- Somente p adicionar divider abaixo da div placa -->
+                        </dl>
+                    </div>
 
-                        <div class="w-full h-max rounded-xl">
-                            <dl
-                                class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
-                                <div class="flex flex-col pb-3">
+                    <div class="w-full h-max rounded-xl">
+                        <dl class="max-w-md text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+                            <div class="flex flex-col pb-3">
+                                @can('access')
                                     <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Ações</dt>
                                     <dd class="text-lg font-semibold">
                                         <div>
@@ -63,31 +63,33 @@
                                                 class="text-gray-200 transition hover:text-blue-600 py-1 mr-2 active:text-blue-800">
                                                 <ion-icon name="create" style="font-size: 28px;"></ion-icon>
                                             </a>
-                                            <button type="button" onclick="confirmDelete({{ $driver->id }}, '{{ $driver->name }}')"
+                                            <button type="button"
+                                                onclick="confirmDelete({{ $driver->id }}, '{{ $driver->name }}')"
                                                 class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
                                                 py-1 px-2"><ion-icon
                                                     name="trash" style="font-size: 28px;"></ion-icon>
                                             </button>
                                         </div>
                                     </dd>
-                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Observações:</dt>
-                                    <dd class="text-lg font-semibold">{{ $driver->observation }}</dd>
-                                </div>
-                            </dl>
-                        </div>
+                                @endcan
+                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Observações:</dt>
+                                <dd class="text-lg font-semibold">{{ $driver->observation }}</dd>
+                            </div>
+                        </dl>
                     </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
         function confirmDelete(id, name) {
-            alertify.confirm(`Tem certeza que deseja EXCLUIR ${name}?`, function (e) {
-                if (e){
+            alertify.confirm(`Tem certeza que deseja EXCLUIR ${name}?`, function(e) {
+                if (e) {
                     let form = document.createElement('form')
                     form.method = 'POST'
                     form.action = `/drivers/${id}`
-                    form.innerHTML = '@csrf @method("DELETE")'
+                    form.innerHTML = '@csrf @method('DELETE')'
                     document.body.appendChild(form)
                     form.submit()
                 } else {

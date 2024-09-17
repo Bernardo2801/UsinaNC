@@ -9,16 +9,18 @@
 
                 <div class="flex items-center justify-between mb-4 tracking-widest mb-8">
                     <div>
-                        <a href="{{ route('drivers.create') }}"
-                        class="inline-flex items-center p-4 bg-slate-50 dark:bg-slate-600 shadow-xl border border-transparent rounded-md font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest hover:bg-gray-200 dark:hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 h-16"><ion-icon
-                                name="add-outline" class="text-[26px] mr-2"></ion-icon>Adicionar motorista</a>
+                        @can('access')
+                            <a href="{{ route('drivers.create') }}"
+                                class="inline-flex items-center p-4 bg-slate-50 dark:bg-slate-600 shadow-xl border border-transparent rounded-md font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest hover:bg-gray-200 dark:hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 h-16"><ion-icon
+                                    name="add-outline" class="text-[26px] mr-2"></ion-icon>Adicionar motorista</a>
+                        @endcan
                     </div>
 
                     <form class="max-w-md w-96">
                         <div class="relative">
                             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                <svg class="w-4 h-4 text-slate-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 20 20">
+                                <svg class="w-4 h-4 text-slate-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                                 </svg>
@@ -35,32 +37,36 @@
                 </div>
                 @if (count($drivers) > 0)
                     @if ($search)
-                        <h2 class="px-4 py-2 font-semibold text-white tracking-widest uppercase">Buscando por: {{ $search }}</h2>
+                        <h2 class="px-4 py-2 font-semibold text-white tracking-widest uppercase">Buscando por:
+                            {{ $search }}</h2>
                     @else
-
                     @endif
                     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                             <thead class="text-sm text-gray-700 uppercase bg-slate-300 dark:bg-gray-700 dark:text-gray-400">
                                 <tr>
-                                    <th scope="col" class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
+                                    <th scope="col"
+                                        class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
                                         Nome
                                     </th>
-                                    <th scope="col" class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
+                                    <th scope="col"
+                                        class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
                                         Matricula
                                     </th>
-                                    <th scope="col" class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
+                                    <th scope="col"
+                                        class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
                                         Categoria
                                     </th>
-                                    <th scope="col" class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
+                                    <th scope="col"
+                                        class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
                                         <span class="sr-only">Edit</span>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($drivers as $driver)
-                                <tr
-                                class="bg-white border-b dark:bg-slate-600 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
+                                    <tr
+                                        class="bg-white border-b dark:bg-slate-600 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">
                                         <th scope="row" class="px-4 py-2 text-slate-800 dark:text-white">
                                             {{ $driver->name }}
                                         </th>
@@ -75,16 +81,18 @@
                                                 class="text-slate-800 dark:text-white transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
                                                 <ion-icon name="eye" style="font-size: 28px;"></ion-icon>
                                             </a>
-                                            <a href="{{ route('drivers.edit', $driver->id) }}"
-                                                class="text-slate-800 dark:text-white transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
-                                                <ion-icon name="create" style="font-size: 28px;"></ion-icon>
-                                            </a>
-                                            <button type="button"
-                                                onclick="confirmDelete({{ $driver->id }}, '{{ $driver->name }}')"
-                                                class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
+                                            @can('access')
+                                                <a href="{{ route('drivers.edit', $driver->id) }}"
+                                                    class="text-slate-800 dark:text-white transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
+                                                    <ion-icon name="create" style="font-size: 28px;"></ion-icon>
+                                                </a>
+                                                <button type="button"
+                                                    onclick="confirmDelete({{ $driver->id }}, '{{ $driver->name }}')"
+                                                    class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
                                             py-1 px-2"><ion-icon
-                                                    name="trash" style="font-size: 28px;"></ion-icon>
-                                            </button>
+                                                        name="trash" style="font-size: 28px;"></ion-icon>
+                                                </button>
+                                            @endcan
                                         </td>
                                     </tr>
                                 @endforeach

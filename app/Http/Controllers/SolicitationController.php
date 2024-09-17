@@ -21,7 +21,7 @@ class SolicitationController extends Controller
             $solicitations = Solicitation::orderBy('sei_number', 'asc')->get();
         }
 
-        return view('solicitations.index', compact('solicitations'), ['solicitations' => $solicitations, 'search' => $search]);
+        return view('solicitations.index', compact('solicitations', 'search'));
     }
 
     public function create()
@@ -77,15 +77,15 @@ class SolicitationController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'requesters_id' => 'required|exists:requesters,id',
-            'materials_id' => 'required|exists:materials,id',
+            'requester_id' => 'required|exists:requesters,id',
+            'material_id' => 'required|exists:materials,id',
             'unit_price' => 'required|numeric',
             'sei_number' => 'required|string',
             'requested_quantity' => 'required|numeric',
             'date_solicitation' => 'required|date',
             'status' => 'required|string',
-            'drivers_id' => 'required|exists:drivers,id',
-            'vehicles_id' => 'required|exists:vehicles,id',
+            'driver_id' => 'required|exists:drivers,id',
+            'vehicle_id' => 'required|exists:vehicles,id',
         ]);
 
         $solicitation = Solicitation::findOrFail($id);

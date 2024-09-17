@@ -42,7 +42,8 @@
                             <div class="flex flex-col py-3">
                                 <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Data da solicitação
                                 </dt>
-                                <dd class="text-lg font-semibold">{{ date('d/m/Y', strtotime($solicitation->date_solicitation)) }}</dd>
+                                <dd class="text-lg font-semibold">
+                                    {{ date('d/m/Y', strtotime($solicitation->date_solicitation)) }}</dd>
                             </div>
                             <div class="flex flex-col py-3">
                                 <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Status</dt>
@@ -65,45 +66,47 @@
                                 <dd class="text-lg font-semibold">{{ $solicitation->vehicle->vehicle_model }}</dd>
                             </div>
                             <div class="flex flex-col py-3">
-                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Ações</dt>
-                                <dd class="text-lg font-semibold">
-                                    <a href="{{ route('solicitations.edit', $solicitation->id) }}"
-                                        class="text-gray-200 transition hover:text-blue-600 py-1 mr-2 active:text-blue-800">
-                                        <ion-icon name="create" style="font-size: 28px;"></ion-icon>
-                                    </a>
-                                    <button type="button"
-                                        onclick="confirmDelete({{ $solicitation->id }}, '{{ $solicitation->sei_number }}')"
-                                        class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
-                                py-1 px-2"><ion-icon
-                                            name="trash" style="font-size: 28px;"></ion-icon>
-                                    </button>
-                            </div>
-                            <div class="flex flex-col py-3">
-                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Observações:</dt>
-                                <dd class="text-lg font-semibold">{{ $solicitation->observation }}</dd>
-                            </div>
-                        </dl>
+                                @can('access')
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Ações</dt>
+                                    <dd class="text-lg font-semibold">
+                                        <a href="{{ route('solicitations.edit', $solicitation->id) }}"
+                                            class="text-gray-200 transition hover:text-blue-600 py-1 mr-2 active:text-blue-800">
+                                            <ion-icon name="create" style="font-size: 28px;"></ion-icon>
+                                        </a>
+                                        <button type="button"
+                                            onclick="confirmDelete({{ $solicitation->id }}, '{{ $solicitation->sei_number }}')"
+                                            class="text-red-600 hover:text-red-700 focus:text-red-800 active:text-red-900 focus focus:outline-none transition ease-in-out duration-150
+                                            py-1 px-2"><ion-icon
+                                                name="trash" style="font-size: 28px;"></ion-icon>
+                                        </button>
+                                </div>
+                                @endcan
+                                <div class="flex flex-col py-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Observações:</dt>
+                                    <dd class="text-lg font-semibold">{{ $solicitation->observation }}</dd>
+                                </div>
+                            </dl>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <script>
-        function confirmDelete(id, solicitation) {
-            alertify.confirm(`Tem certeza que deseja EXCLUIR ${solicitation}?`, function(e) {
-                if (e) {
-                    let form = document.createElement('form')
-                    form.method = 'POST'
-                    form.action = `/solicitations/${id}`
-                    form.innerHTML = '@csrf @method('DELETE')'
-                    document.body.appendChild(form)
-                    form.submit()
-                } else {
-                    return false
-                }
-            })
-        }
-    </script>
+        <script>
+            function confirmDelete(id, solicitation) {
+                alertify.confirm(`Tem certeza que deseja EXCLUIR ${solicitation}?`, function(e) {
+                    if (e) {
+                        let form = document.createElement('form')
+                        form.method = 'POST'
+                        form.action = `/solicitations/${id}`
+                        form.innerHTML = '@csrf @method('DELETE')'
+                        document.body.appendChild(form)
+                        form.submit()
+                    } else {
+                        return false
+                    }
+                })
+            }
+        </script>
 
-@endsection
+    @endsection

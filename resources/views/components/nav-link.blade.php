@@ -1,9 +1,10 @@
 @props(['active'])
 
 @php
-$classes = ($active ?? false)
+    $classes =
+        $active ?? false
             ? 'inline-flex items-center px-1 pt-1 border-b-2 border-white text-xs font-semibold leading-5 uppercase tracking-widest text-gray-300 focus:outline-none focus:border-white transition duration-150 ease-in-out'
-            : 'inline-flex items-center px-1 pt-1 border-b-2 border-transparent font-semibold text-xs leading-5 text-white uppercase tracking-widest hover:text-gray-600 hover:border-gray-300 focus:outline-none focus:text-gray-600 focus:border-gray-300 transition duration-150 ease-in-out';
+            : 'inline-flex items-center px-1 pt-1 border-b-2 border-transparent font-semibold text-xs leading-5 text-white uppercase tracking-widest hover:border-gray-300 focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out';
 
 @endphp
 
