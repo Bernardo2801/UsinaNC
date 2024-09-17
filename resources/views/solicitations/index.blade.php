@@ -86,11 +86,23 @@
                                         <td class="px-4 py-2 text-slate-800 dark:text-white">
                                             {{ $solicitation->material->name }}
                                         </td>
-                                        <td class="px-4 py-2 text-slate-800 dark:text-white">
+                                        <td class="px-4 py-2 text-slate-800     dark:text-white">
                                             {{ $solicitation->requested_quantity }}
                                         </td>
                                         <td class="px-4 py-2 text-slate-800 dark:text-white">
-                                            {{ $solicitation->status }}
+                                            @if ($solicitation->status == 'Aguardando')
+                                                <span
+                                                    class="bg-yellow-500 px-2 py-1 rounded">{{ $solicitation->status }}</span>
+                                            @elseif($solicitation->status == 'Iniciado')
+                                                <span
+                                                    class="bg-blue-500 px-2 py-1 rounded">{{ $solicitation->status }}</span>
+                                            @elseif($solicitation->status == 'Finalizado')
+                                                <span
+                                                    class="bg-green-500 px-2 py-1 rounded">{{ $solicitation->status }}</span>
+                                            @elseif($solicitation->status == 'Cancelado')
+                                                <span
+                                                    class="bg-red-500 px-2 py-1 rounded">{{ $solicitation->status }}</span>
+                                            @endif
                                         </td>
                                         <td class="px-4 py-2 text-white text-right">
                                             <a href="{{ route('solicitations.show', $solicitation->id) }}"

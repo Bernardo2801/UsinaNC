@@ -16,8 +16,8 @@
                     <h3 class="px-3 py-1.5 font-semibold text-sm text-white uppercase tracking-widest">Preencha os campos
                         para adiconar nova solicitação.</h3>
                 </div>
-                <form method="POST" action="{{ route('solicitations.store') }}" class="form-control w-full px-3 py-1.5">
 
+                <form method="POST" action="{{ route('solicitations.store') }}" class="form-control w-full px-3 py-1.5">
                     @csrf
                     <div class="form-group mb-6">
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Selecione o
@@ -48,8 +48,7 @@
                         <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Preço atual</label>
                         <input type="number" step="0.01"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
-                            placeholder="Informe o preço atual do material de acordo com sua medida..."
-                            name="unit_price"
+                            placeholder="Informe o preço atual do material de acordo com sua medida..." name="unit_price"
                             required>
                     </div>
                     <div class="form-group mb-6" x-data>
@@ -57,26 +56,20 @@
                             Sei</label>
                         <input type="text" maxlength="22"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
-                            placeholder="Digite o Nº do Processo Sei..."
-                            x-mask="99999-99999999/9999-99"
-                            name="sei_number"
+                            placeholder="Digite o Nº do Processo Sei..." x-mask="99999-99999999/9999-99" name="sei_number"
                             required>
                     </div>
                     <div class="form-group mb-6">
                         <label for="text" class="block text-sm font-medium text-gray-300 uppercase">Quantidade</label>
                         <input type="number" step="0.01" min="0.01"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
-                            placeholder="Informe a quantidade solicitada..."
-                            name="requested_quantity"
-                            required>
+                            placeholder="Informe a quantidade solicitada..." name="requested_quantity" required>
                     </div>
                     <div class="form-group mb-6">
                         <label for="text" class="block text-sm font-medium text-gray-300 uppercase">Data</label>
                         <input type="date" step="0.01" min="0.01"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
-                            placeholder="Informe a data que foi solicitado..."
-                            name="date_solicitation"
-                            required>
+                            placeholder="Informe a data que foi solicitado..." name="date_solicitation" required>
                     </div>
                     <div class="form-group mb-6">
                         <label for="text" class="block text-sm font-medium text-gray-300 uppercase mb-2">Status</label>
