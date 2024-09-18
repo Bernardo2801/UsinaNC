@@ -45,9 +45,18 @@
                                 <dd class="text-lg font-semibold">
                                     {{ date('d/m/Y', strtotime($solicitation->date_solicitation)) }}</dd>
                             </div>
-                            <div class="flex flex-col py-3">
+                            <div class="py-3">
                                 <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Status</dt>
-                                <dd class="text-lg font-semibold">{{ $solicitation->status }}</dd>
+                                @if ($solicitation->status == 'Aguardando')
+                                    <span class="bg-yellow-500 px-2 py-1 rounded inline-block">{{ $solicitation->status }}
+                                    </span>
+                                @elseif($solicitation->status == 'Iniciado')
+                                    <span class="bg-blue-500 px-2 py-1 rounded inline-block">{{ $solicitation->status }}</span>
+                                @elseif($solicitation->status == 'Finalizado')
+                                    <span class="bg-green-500 px-2 py-1 rounded inline-block">{{ $solicitation->status }}</span>
+                                @elseif($solicitation->status == 'Cancelado')
+                                    <span class="bg-red-500 px-2 py-1 rounded inline-block">{{ $solicitation->status }}</span>
+                                @endif
                             </div>
                             <div></div> <!-- Somente p adicionar divider abaixo da div placa -->
                         </dl>
@@ -80,33 +89,33 @@
                                                 name="trash" style="font-size: 28px;"></ion-icon>
                                         </button>
                                 </div>
-                                @endcan
-                                <div class="flex flex-col py-3">
-                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Observações:</dt>
-                                    <dd class="text-lg font-semibold">{{ $solicitation->observation }}</dd>
-                                </div>
-                            </dl>
-                        </div>
+                            @endcan
+                            <div class="flex flex-col py-3">
+                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Observações:</dt>
+                                <dd class="text-lg font-semibold">{{ $solicitation->observation }}</dd>
+                            </div>
+                        </dl>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script>
-            function confirmDelete(id, solicitation) {
-                alertify.confirm(`Tem certeza que deseja EXCLUIR ${solicitation}?`, function(e) {
-                    if (e) {
-                        let form = document.createElement('form')
-                        form.method = 'POST'
-                        form.action = `/solicitations/${id}`
-                        form.innerHTML = '@csrf @method('DELETE')'
-                        document.body.appendChild(form)
-                        form.submit()
-                    } else {
-                        return false
-                    }
-                })
-            }
-        </script>
+    <script>
+        function confirmDelete(id, solicitation) {
+            alertify.confirm(`Tem certeza que deseja EXCLUIR ${solicitation}?`, function(e) {
+                if (e) {
+                    let form = document.createElement('form')
+                    form.method = 'POST'
+                    form.action = `/solicitations/${id}`
+                    form.innerHTML = '@csrf @method('DELETE')'
+                    document.body.appendChild(form)
+                    form.submit()
+                } else {
+                    return false
+                }
+            })
+        }
+    </script>
 
-    @endsection
+@endsection

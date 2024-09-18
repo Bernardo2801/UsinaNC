@@ -6,38 +6,38 @@
 
     <div class="py-12">
         <div class="px-4 sm:w-2/3 lg:w-1/2 max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="rounded-lg shadow-lg bg-gray-800 py-10 md:py-12 px-4 md:px-6">
+            <div class="rounded-lg shadow-lg bg-slate-50 dark:bg-slate-800 py-10 md:py-12 px-4 md:px-6">
                 <div class="mb-6 -mt-8 -ml-1.4">
                     <a href="{{ route('drivers.index') }}"
-                        class="inline-flex items-center px-3 py-1.5 font-semibold text-sm text-white uppercase tracking-widest"><ion-icon
+                        class="inline-flex items-center px-3 py-1.5 bg-slate-50 dark:bg-slate-600 shadow-xl border border-transparent rounded-md font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest"><ion-icon
                             name="arrow-back" class="text-[26px] mr-2"></ion-icon>Voltar</a>
                 </div>
                 <div class="mb-2">
-                    <h3 class="px-3 py-1.5 font-semibold text-sm text-white uppercase tracking-widest">Preencha os campos
+                    <h3 class="px-3 py-1.5 font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest">Preencha os campos
                         para adiconar novo motorista.</h3>
                 </div>
                 <form method="POST" action="{{ route('drivers.store') }}" class="form-control w-full px-3 py-1.5">
                     @csrf
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Nome</label>
+                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Nome</label>
                         <input type="text" name="name" id="name"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Digite aqui o nome do motorista..." required>
                     </div>
                     <div class="form-group mb-6" x-data>
-                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Cnh</label>
+                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Cnh</label>
                         <input type="text" name="cnh" id="cnh" maxlength="9"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Informe qual o número da CNH..." required x-mask="999999999">
                     </div>
                     <div class="form-group mb-6" x-data>
-                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase">Cpf</label>
+                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Cpf</label>
                         <input type="text" name="cpf" id="cpf" maxlength="14"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Informe qual o CPF..." required x-mask="999.999.999-99">
                     </div>
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase mb-2">Selecione a
+                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase mb-2">Selecione a
                             categoria da carteira do motorista</label>
                         <div class="flex">
                             <div class="flex items-center me-4">
@@ -67,13 +67,13 @@
                         </div>
                     </div>
                     <div class="form-group mb-6" x-data>
-                        <label for="title" class="block text-sm font-medium text-gray-300 uppercase">N° Sei</label>
+                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">N° Sei</label>
                         <input type="text" name="registration" id="registration" maxlength="11"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Digite o Nº Sei do motorista..." required x-mask="99999999999">
                     </div>
 
-                    <label for="message" class="block mb-2 text-sm font-medium text-gray-300 uppercase">Observação</label>
+                    <label for="message" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Observação</label>
                     <textarea id="observation" name="observation" rows="4"
                         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Caso exista alguma observação sobre este motorista, escreva aqui..."></textarea>

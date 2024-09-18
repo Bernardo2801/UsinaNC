@@ -12,7 +12,7 @@
                     <div>
                         @can('access')
                             <a href="{{ route('materials.create') }}"
-                                class="inline-flex items-center p-4 bg-slate-50 dark:bg-slate-600 shadow-xl border border-transparent rounded-md font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest hover:bg-gray-200 dark:hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 h-16"><ion-icon
+                                class="inline-flex items-center p-4 bg-slate-50 dark:bg-slate-600 shadow-xl border border-transparent rounded-md font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest hover:bg-gray-200 dark:hover:bg-gray-700 focus:bg-gray-200 active:bg-gray-400 dark:active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 h-16"><ion-icon
                                     name="add-outline" class="text-[26px] mr-2"></ion-icon>Adicionar material</a>
                         @endcan
                     </div>

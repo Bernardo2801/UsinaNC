@@ -8,7 +8,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 grid grid-cols-4 gap-4 text-center">
             <a href="{{ route('vehicles.index') }}">
                 <div
-                    class="bg-white dark:bg-slate-600 hover:bg-gray-100 dark:hover:bg-gray-600 overflow-hidden shadow-xl sm:rounded-lg p-6 lg:p-8">
+                    class="transition transform hover:scale-105 bg-white dark:bg-slate-600 hover:bg-gray-100 dark:hover:bg-gray-600 overflow-hidden shadow-xl sm:rounded-lg p-6 lg:p-8">
                     <h1 class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">Veículo</h1>
                     <span class="text-slate-800 dark:text-white"><ion-icon name="car-outline"
                             style="font-size: 92px;"></ion-icon></span>
@@ -17,7 +17,7 @@
             </a>
             <a href="{{ route('drivers.index') }}">
                 <div
-                    class="bg-white dark:bg-slate-600 hover:bg-gray-100 dark:hover:bg-gray-600 overflow-hidden shadow-xl sm:rounded-lg p-6 lg:p-8">
+                    class="transition transform hover:scale-105 bg-white dark:bg-slate-600 hover:bg-gray-100 dark:hover:bg-gray-600 overflow-hidden shadow-xl sm:rounded-lg p-6 lg:p-8">
                     <h1 class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">Motorista
                     </h1>
                     <span class="text-slate-800 dark:text-white"><ion-icon name="person-outline"
@@ -27,7 +27,7 @@
             </a>
             <a href="{{ route('materials.index') }}">
                 <div
-                    class="bg-white dark:bg-slate-600 hover:bg-gray-100 dark:hover:bg-gray-600 overflow-hidden shadow-xl sm:rounded-lg p-6 lg:p-8">
+                    class="transition transform hover:scale-105 bg-white dark:bg-slate-600 hover:bg-gray-100 dark:hover:bg-gray-600 overflow-hidden shadow-xl sm:rounded-lg p-6 lg:p-8">
                     <h1 class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">Materiais
                     </h1>
                     <span class="text-slate-800 dark:text-white"><ion-icon name="construct-outline"
@@ -37,7 +37,7 @@
             </a>
             <a href="{{ route('requesters.index') }}">
                 <div
-                    class="bg-white dark:bg-slate-600 hover:bg-gray-100 dark:hover:bg-gray-600 overflow-hidden shadow-xl sm:rounded-lg p-6 lg:p-8">
+                    class="transition transform hover:scale-105 bg-white dark:bg-slate-600 hover:bg-gray-100 dark:hover:bg-gray-600 overflow-hidden shadow-xl sm:rounded-lg p-6 lg:p-8">
                     <h1 class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
                         Solicitantes</h1>
                     <span class="text-slate-800 dark:text-white"><ion-icon name="person-outline"
@@ -92,6 +92,10 @@
                                         class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
                                         Status
                                     </th>
+                                    <th scope="col"
+                                        class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
+
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -106,8 +110,8 @@
                                         </td>
                                         <td class="px-4 py-2 text-slate-800 dark:text-white">
                                             @if ($solicitation->status == 'Aguardando')
-                                                <span
-                                                    class="bg-yellow-500 px-2 py-1 rounded">{{ $solicitation->status }}</span>
+                                                <span class="bg-yellow-500 px-2 py-1 rounded">{{ $solicitation->status }}
+                                                </span>
                                             @elseif($solicitation->status == 'Iniciado')
                                                 <span
                                                     class="bg-blue-500 px-2 py-1 rounded">{{ $solicitation->status }}</span>
@@ -118,6 +122,12 @@
                                                 <span
                                                     class="bg-red-500 px-2 py-1 rounded">{{ $solicitation->status }}</span>
                                             @endif
+                                        </td>
+                                        <td class="px-4 py-2 text-slate-800 dark:text-white">
+                                            <a href="{{ route('solicitations.show', $solicitation->id) }}"
+                                                class="text-slate-800 dark:text-white transition hover:text-blue-600 py-1 px-2 active:text-blue-800">
+                                                <ion-icon name="eye" style="font-size: 28px;"></ion-icon>
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach
