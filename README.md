@@ -25,7 +25,7 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 
 # Instalação
 
-1. Clone o repositório: `https://github.com/Bernardo2801/controle-de-estoque.git`;
+1. Clone o repositório: `https://github.com/Bernardo2801/UsinaNC.git`;
 2. Instale as dependências PHP: `composer install`;
 3. Configure o arquivo .env com suas configurações de banco de dados. Para gerar o arquivo .env, execute: `copy .env.example .env`;
 4. Execute as migrações: `php artisan migrate`;
