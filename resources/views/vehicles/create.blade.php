@@ -13,7 +13,8 @@
                             name="arrow-back" class="text-[26px] mr-2"></ion-icon>Voltar</a>
                 </div>
                 <div class="mb-2">
-                    <h3 class="px-3 py-1.5 font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest">Preencha os campos
+                    <h3 class="px-3 py-1.5 font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest">
+                        Preencha os campos
                         para adiconar novo veículo.</h3>
                 </div>
 
@@ -21,7 +22,8 @@
                     @csrf
                     <div class="form-group mb-6">
 
-                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Modelo</label>
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Modelo</label>
                         <input type="text" name="vehicle_model" id="vehicle_model"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Digite aqui o modelo do veículo..." required>
@@ -29,13 +31,15 @@
 
                     </div>
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Tipo</label>
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Tipo</label>
                         <input type="text" name="vehicle_type" id="vehicle_type"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Informe o tipo deste veículo..." required>
                     </div>
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Placa</label>
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Placa</label>
 
                         <input type="text" name="plate" id="plate" maxlength="7"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
@@ -43,14 +47,36 @@
                         <small class="text-gray-600">Se a placa for antiga, não utilize o hífen (-).</small>
                     </div>
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Chassi</label>
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Chassi</label>
 
                         <input type="text" name="chassi" id="chassi" maxlength="17"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Informe o chassi..." required>
                     </div>
 
-                    <label for="message" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Observação</label>
+                    <div class="form-group mb-6">
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase mb-2">Este veículo
+                            está disponível para uso?</label>
+                        <div class="flex">
+                            <div class="flex items-center me-4">
+                                <input type="radio" name="availability" id="availability" value="Disponível"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="availability"
+                                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sim</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="availability" id="availability" value="Indisponível"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="availability"
+                                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Não</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <label for="message"
+                        class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Observação</label>
                     <textarea id="observation" name="observation" rows="4"
                         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Caso exista alguma observação sobre este veículo, escreva aqui..."></textarea>

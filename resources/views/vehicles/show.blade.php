@@ -33,6 +33,16 @@
                                 <dd class="text-lg font-semibold">{{ $vehicle->plate }}</dd>
                             </div>
                             <div class="flex flex-col py-3">
+                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Disponibilidade</dt>
+                                <dd class="text-lg font-semibold">
+                                    @if ($vehicle->availability == 'Disponível')
+                                        <span class="bg-green-500 px-2 py-1 rounded">{{ $vehicle->availability }}</span>
+                                    @elseif ($vehicle->availability == 'Indisponível')
+                                        <span class="bg-red-500 px-2 py-1 rounded">{{ $vehicle->availability }}</span>
+                                    @endif
+                                </dd>
+                            </div>
+                            <div class="flex flex-col py-3">
                                 <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Data de cadastro
                                 </dt>
                                 <dd class="text-lg font-semibold">

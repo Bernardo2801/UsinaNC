@@ -57,6 +57,30 @@
                             placeholder="Informe o chassi..." required>
                     </div>
 
+                    <div class="form-group mb-6">
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase mb-2">
+                            Este veículo está disponível para uso?
+                        </label>
+                        <div class="flex">
+                            <div class="flex items-center me-4">
+                                <input type="radio" name="availability" id="availability-yes" value="Disponível"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                    {{ old('availability', $vehicle->availability) == 'Disponível' ? 'checked' : '' }}>
+                                <label for="availability-yes"
+                                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sim</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="radio" name="availability" id="availability-no" value="Indisponível"
+                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                    {{ old('availability', $vehicle->availability) == 'Indisponível' ? 'checked' : '' }}>
+                                <label for="availability-no"
+                                    class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Não</label>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <label for="message" class="block mb-2 text-sm font-medium text-gray-300 uppercase">Observação</label>
                     <textarea type="text" id="observation" name="observation" rows="4"
                         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
@@ -68,10 +92,11 @@
                         <ion-icon name="checkbox-outline" class="text-[26px] mr-2"></ion-icon>
                         Editar</button>
 
-                        @if ($errors->any())
+                    @if ($errors->any())
                         <div class="mt-4">
                             @foreach ($errors->all() as $error)
-                            <span class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300 uppercase">{{ $error }}</span><br>
+                                <span
+                                    class="bg-red-100 text-red-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-red-900 dark:text-red-300 uppercase">{{ $error }}</span><br>
                             @endforeach
                         </div>
                     @endif

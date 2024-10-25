@@ -10,5 +10,5 @@ class Vehicle extends Model
     use HasFactory;
 
     protected $guarded = [];
-    protected $fillable = ['vehicle_model', 'vehicle_type', 'chassi', 'plate', 'observation'];
+    protected $fillable = ['vehicle_model', 'vehicle_type', 'chassi', 'plate', 'availability', 'observation'];
 }

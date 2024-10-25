@@ -63,6 +63,10 @@
                                     </th>
                                     <th scope="col"
                                         class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
+                                        Disponibilidade
+                                    </th>
+                                    <th scope="col"
+                                        class="px-4 py-2 font-semibold text-slate-800 dark:text-white tracking-widest uppercase">
                                         <span class="sr-only">Edit</span>
                                     </th>
                                 </tr>
@@ -83,6 +87,16 @@
                                         <td class="px-4 py-2 text-slate-800 dark:text-white">
                                             {{ $vehicle->chassi }}
                                         </td>
+                                        <td class="px-4 py-2 text-slate-800 dark:text-white">
+                                            @if ($vehicle->availability == 'Disponível')
+                                                <span
+                                                    class="bg-green-500 px-2 py-1 rounded">{{ $vehicle->availability }}</span>
+                                            @elseif ($vehicle->availability == 'Indisponível')
+                                                <span
+                                                    class="bg-red-500 px-2 py-1 rounded">{{ $vehicle->availability }}</span>
+                                            @endif
+                                        </td>
+
                                         <td class="px-4 py-2 text-white text-right">
                                             <a href="{{ route('vehicles.show', $vehicle->id) }}"
                                                 class="text-slate-800 dark:text-white transition hover:text-blue-600 py-1 px-2 active:text-blue-800">

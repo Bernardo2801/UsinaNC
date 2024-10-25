@@ -68,7 +68,7 @@ class SolicitationController extends Controller
         $requesters = Requester::all();
         $materials = Material::all();
         $drivers = Driver::all();
-        $vehicles = Vehicle::all();
+        $vehicles = Vehicle::where('availability','Disponível')->get();
 
         $solicitation = Solicitation::findOrFail($id);
         return view('solicitations.edit', compact('solicitation', 'requesters', 'materials', 'drivers', 'vehicles'));

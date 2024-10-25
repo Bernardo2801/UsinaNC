@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('vehicle_type');
             $table->string('chassi');
             $table->string('plate');
+            $table->string('availability');
             $table->string('observation')->nullable();
             $table->timestamps();
         });

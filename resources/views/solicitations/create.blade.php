@@ -13,14 +13,16 @@
                             name="arrow-back" class="text-[26px] mr-2"></ion-icon>Voltar</a>
                 </div>
                 <div class="mb-2">
-                    <h3 class="px-3 py-1.5 font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest">Preencha os campos
+                    <h3 class="px-3 py-1.5 font-semibold text-sm text-slate-800 dark:text-white uppercase tracking-widest">
+                        Preencha os campos
                         para adiconar nova solicitação.</h3>
                 </div>
 
                 <form method="POST" action="{{ route('solicitations.store') }}" class="form-control w-full px-3 py-1.5">
                     @csrf
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Selecione o
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Selecione o
                             Solicitante</label>
                         <select name="requester_id" id="requester_id"
                             class="mt-1 block w-full py-2.3 px-0 text-sm text-blue-600 dark:text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600">
@@ -33,7 +35,8 @@
                         </select>
                     </div>
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Selecione o
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Selecione o
                             Material</label>
                         <select name="material_id" id="material_id"
                             class="mt-1 block w-full py-2.3 px-0 text-sm text-blue-600 dark:text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600">
@@ -45,14 +48,17 @@
                         </select>
                     </div>
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Preço atual</label>
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Preço
+                            atual</label>
                         <input type="number" step="0.01"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Informe o preço atual do material de acordo com sua medida..." name="unit_price"
                             required>
                     </div>
                     <div class="form-group mb-6" x-data>
-                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">N° Processo
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">N° Processo
                             Sei</label>
                         <input type="text" maxlength="22"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
@@ -60,19 +66,22 @@
                             required>
                     </div>
                     <div class="form-group mb-6">
-                        <label for="text" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Quantidade</label>
+                        <label for="text"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Quantidade</label>
                         <input type="number" step="0.01" min="0.01"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Informe a quantidade solicitada..." name="requested_quantity" required>
                     </div>
                     <div class="form-group mb-6">
-                        <label for="text" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Data</label>
+                        <label for="text"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Data</label>
                         <input type="date" step="0.01" min="0.01"
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Informe a data que foi solicitado..." name="date_solicitation" required>
                     </div>
                     <div class="form-group mb-6">
-                        <label for="text" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase mb-2">Status</label>
+                        <label for="text"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase mb-2">Status</label>
                         <div class="flex flex-wrap">
                             <div class="flex items-center me-4">
                                 <input checked id="yellow-radio" type="radio" value="Aguardando" name="status"
@@ -102,7 +111,8 @@
                     </div>
 
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Selecione o
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Selecione o
                             Motorista</label>
                         <select name="driver_id" id="driver_id"
                             class="mt-1 block w-full py-2.3 px-0 text-sm text-blue-600 dark:text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600">
@@ -114,14 +124,18 @@
                     </div>
 
                     <div class="form-group mb-6">
-                        <label for="title" class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Selecione o
+                        <label for="title"
+                            class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Selecione o
                             Veiculo</label>
                         <select name="vehicle_id" id="vehicle_id"
                             class="mt-1 block w-full py-2.3 px-0 text-sm text-blue-600 dark:text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600">
                             <option class="dark:bg-gray-600" value=""></option>
                             @foreach ($vehicles as $vehicle)
-                                <option class="dark:bg-gray-600" value="{{ $vehicle->id }}">{{ $vehicle->vehicle_model }}
-                                </option>
+                                @if ($vehicle->availability == 'Disponível')
+                                    <option class="dark:bg-gray-600" value="{{ $vehicle->id }}">
+                                        {{ $vehicle->vehicle_model }}
+                                    </option>
+                                @endif
                             @endforeach
                         </select>
                     </div>

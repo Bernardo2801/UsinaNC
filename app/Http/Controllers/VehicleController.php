@@ -31,6 +31,7 @@ class VehicleController extends Controller
             'vehicle_type' => 'required|string',
             'chassi' => 'required|string|size:17',
             'plate' => 'required|string|size:7',
+            'availability' => 'required|string',
             'observation' => 'nullable|string',
         ]);
 
@@ -58,6 +59,7 @@ class VehicleController extends Controller
             'vehicle_type' => 'required|string',
             'chassi' => 'required|string|size:17',
             'plate' => 'required|string|size:7',
+            'availability' => 'required|string',
             'observation' => 'nullable|string',
         ]);
 
