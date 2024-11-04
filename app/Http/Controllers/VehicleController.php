@@ -32,7 +32,7 @@ class VehicleController extends Controller
             'chassi' => 'required|string|size:17',
             'plate' => 'required|string|size:7',
             'availability' => 'required|string',
-            'observation' => 'nullable|string',
+            'infos' => 'nullable|string',
         ]);
 
         Vehicle::create($request->all());
@@ -60,7 +60,7 @@ class VehicleController extends Controller
             'chassi' => 'required|string|size:17',
             'plate' => 'required|string|size:7',
             'availability' => 'required|string',
-            'observation' => 'nullable|string',
+            'infos' => 'nullable|string',
         ]);
 
         $vehicle = Vehicle::findOrFail($id);

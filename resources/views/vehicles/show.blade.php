@@ -78,8 +78,9 @@
                                         </div>
                                     </dd>
                                 @endcan
-                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Observações:</dt>
-                                <dd class="text-lg font-semibold">{{ $vehicle->observation }}</dd>
+                                <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400 uppercase">Informações sobre
+                                    revisão:</dt>
+                                <dd class="text-lg font-semibold">{{ $vehicle->infos }}</dd>
                             </div>
                         </dl>
                     </div>

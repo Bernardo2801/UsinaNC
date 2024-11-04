@@ -28,7 +28,6 @@
                             class="block w-full py-2.3 px-0 text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:border-blue-500 focus:outline-none focus:ring-0 focus-text-white focus-border-blue-600"
                             placeholder="Digite aqui o modelo do veículo..." required>
 
-
                     </div>
                     <div class="form-group mb-6">
                         <label for="title"
@@ -76,10 +75,11 @@
                     </div>
 
                     <label for="message"
-                        class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Observação</label>
-                    <textarea id="observation" name="observation" rows="4"
+                        class="block text-sm font-medium text-slate-800 dark:text-gray-300 uppercase">Informações sobre
+                        revisão</label>
+                    <textarea id="infos" name="infos" rows="4"
                         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        placeholder="Caso exista alguma observação sobre este veículo, escreva aqui..."></textarea>
+                        placeholder="Caso exista alguma informação sobre revisão deste veículo aqui..."></textarea>
 
                     <button type="submit"
                         class="inline-flex items-center px-3 py-1.5 bg-gray-600 border border-transparent rounded-md font-semibold text-sm text-white uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 transition ease-in-out duration-150 mt-4"
